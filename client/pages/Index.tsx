@@ -223,7 +223,7 @@ export default function Index() {
             {/* Left Content */}
             <div>
               <Badge className="mb-8 bg-brand-50 text-brand-700 border-brand-200 px-4 py-2">
-                ✨ Trusted by 10,000+ Businesses
+                ��� Trusted by 10,000+ Businesses
               </Badge>
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
@@ -495,7 +495,7 @@ export default function Index() {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-neutral-50">
+      <section id="pricing" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-neutral-900 mb-4">
