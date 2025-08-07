@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle, Users, Globe, Shield, Star, Menu, X } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, Globe, Shield, Star, Menu, X, MessageCircle, Clock, FileText, Award, Building2, Phone } from "lucide-react";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +23,56 @@ export default function Index() {
     { name: "RAKBANK", logo: "🏢" },
     { name: "HSBC", logo: "🏪" },
     { name: "IFZA", logo: "🏭" },
+  ];
+
+  const trustIndicators = [
+    { icon: <Award className="w-6 h-6" />, title: "DED Approved", description: "Authorized by Dubai Department of Economic Development" },
+    { icon: <Shield className="w-6 h-6" />, title: "100% Legal Compliance", description: "Full government approval and registration" },
+    { icon: <Star className="w-6 h-6" />, title: "5-Star Rated", description: "Trusted by 10,000+ successful entrepreneurs" },
+    { icon: <Clock className="w-6 h-6" />, title: "7-Day Setup", description: "Fastest business registration in UAE" },
+  ];
+
+  const jurisdictions = [
+    {
+      title: "Dubai Free Zones",
+      description: "100% foreign ownership, zero tax",
+      features: ["DMCC", "JAFZA", "DAFZA", "IFZA"],
+      price: "From AED 8,500",
+      popular: true
+    },
+    {
+      title: "Dubai Mainland",
+      description: "Trade anywhere in UAE & GCC",
+      features: ["Local Partner Required", "Wider Business Scope", "Government Contracts"],
+      price: "From AED 15,000",
+      popular: false
+    },
+    {
+      title: "Abu Dhabi Global Market",
+      description: "International financial center",
+      features: ["Financial Services", "Asset Management", "FinTech"],
+      price: "From AED 12,000",
+      popular: false
+    }
+  ];
+
+  const setupTimeline = [
+    { step: "1", title: "Free Consultation", description: "Discuss your business goals and requirements", duration: "30 minutes" },
+    { step: "2", title: "Document Preparation", description: "Prepare and notarize all required documents", duration: "1-2 days" },
+    { step: "3", title: "License Application", description: "Submit application to relevant authorities", duration: "3-5 days" },
+    { step: "4", title: "Approvals & Setup", description: "Receive approvals and complete registration", duration: "2-3 days" },
+    { step: "5", title: "Bank Account & Visa", description: "Open bank account and process visas", duration: "5-7 days" }
+  ];
+
+  const documentChecklist = [
+    "Passport copies of shareholders/directors",
+    "No objection certificate (if employed)",
+    "Educational certificates (attested)",
+    "Proof of address (utility bill)",
+    "Business plan and activity description",
+    "Initial approval certificate",
+    "Memorandum of Association",
+    "Lease agreement (if applicable)"
   ];
 
   const pricingPlans = [
@@ -207,9 +257,14 @@ export default function Index() {
                   Get Started Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50 px-8 py-4 text-lg rounded-full">
-                  Book Free Call
+                <Button size="lg" variant="outline" className="border-2 border-green-500 text-green-600 hover:bg-green-50 px-8 py-4 text-lg rounded-full">
+                  <MessageCircle className="w-5 h-5 mr-2" />
+                  WhatsApp Consultation
                 </Button>
+              </div>
+
+              <div className="mt-8 text-sm text-neutral-500">
+                🔒 No hidden fees • 💯 Money-back guarantee • ⚡ Setup in 7 days
               </div>
             </div>
 
