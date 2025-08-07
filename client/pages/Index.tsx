@@ -168,7 +168,7 @@ export default function Index() {
       <section className="relative bg-white text-neutral-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-brand-50/20"></div>
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
