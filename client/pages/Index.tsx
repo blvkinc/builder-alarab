@@ -223,7 +223,7 @@ export default function Index() {
             {/* Left Content */}
             <div>
               <Badge className="mb-8 bg-brand-50 text-brand-700 border-brand-200 px-4 py-2">
-                ��� Trusted by 10,000+ Businesses
+                ✨ Trusted by 10,000+ Businesses
               </Badge>
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
@@ -545,21 +545,72 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Success Stories Section */}
       <section className="py-20 bg-neutral-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-brand-600/20 text-brand-400">
-              Why Choose UAE
+              Client Success Stories
             </Badge>
             <h2 className="text-4xl font-bold mb-4">
-              Benefits of setting up a company in UAE
+              Trusted by 10,000+ Successful Entrepreneurs
             </h2>
             <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
-              Discover the advantages that make UAE the preferred destination for international businesses
+              See how we've helped businesses like yours establish and thrive in the UAE
             </p>
           </div>
 
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            <Card className="p-8 bg-neutral-800/50 border-neutral-700">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  MR
+                </div>
+                <div>
+                  <div className="font-semibold text-white">Mohammed Rahman</div>
+                  <div className="text-sm text-neutral-400">Tech Solutions DMCC</div>
+                </div>
+              </div>
+              <p className="text-neutral-300 leading-relaxed italic mb-4">
+                "UAE Business Setup made our company formation incredibly smooth. We were operational in Dubai within 8 days, and their team handled everything from licensing to bank account opening."
+              </p>
+              <div className="text-brand-400 text-sm">⭐⭐⭐⭐⭐ Setup completed in 8 days</div>
+            </Card>
+
+            <Card className="p-8 bg-neutral-800/50 border-neutral-700">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  SJ
+                </div>
+                <div>
+                  <div className="font-semibold text-white">Sarah Johnson</div>
+                  <div className="text-sm text-neutral-400">Global Trading LLC</div>
+                </div>
+              </div>
+              <p className="text-neutral-300 leading-relaxed italic mb-4">
+                "Professional service from start to finish. They guided us through mainland setup, helped with local partner arrangements, and we're now trading across the entire GCC region."
+              </p>
+              <div className="text-brand-400 text-sm">⭐⭐⭐⭐⭐ AED 2.5M annual revenue</div>
+            </Card>
+
+            <Card className="p-8 bg-neutral-800/50 border-neutral-700">
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-brand-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                  DK
+                </div>
+                <div>
+                  <div className="font-semibold text-white">David Kim</div>
+                  <div className="text-sm text-neutral-400">FinTech Innovations</div>
+                </div>
+              </div>
+              <p className="text-neutral-300 leading-relaxed italic mb-4">
+                "Exceptional support for our ADGM license. Their expertise in financial services regulations saved us months of back-and-forth with authorities. Highly recommended!"
+              </p>
+              <div className="text-brand-400 text-sm">⭐⭐⭐⭐⭐ ADGM License approved</div>
+            </Card>
+          </div>
+
+          {/* Benefits Grid */}
           <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((benefit, index) => (
               <div key={index} className="text-center">
