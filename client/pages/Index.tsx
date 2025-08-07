@@ -202,10 +202,15 @@ export default function Index() {
                 ))}
               </div>
               
-              <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg">
-                Get Started Now
-                <ArrowRight className="w-5 h-5 ml-2" />
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                  Get Started Now
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </Button>
+                <Button size="lg" variant="outline" className="border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50 px-8 py-4 text-lg rounded-full">
+                  Book Free Call
+                </Button>
+              </div>
             </div>
 
             {/* Right Form */}
