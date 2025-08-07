@@ -103,31 +103,32 @@ export default function Variation3() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white/90 backdrop-blur-md shadow-sm border-b fixed w-full z-50">
+      <nav className="bg-white/95 backdrop-blur-md border-b border-neutral-100 fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-neutral-900">
-                UAE<span className="text-brand-600">Business</span>
+              <div className="text-xl font-bold text-neutral-900">
+                <span className="text-neutral-900">🏢</span> UAE Business
               </div>
             </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-neutral-600 hover:text-neutral-900 transition-colors">Home</a>
-              <a href="#process" className="text-neutral-600 hover:text-neutral-900 transition-colors">Process</a>
-              <a href="#packages" className="text-neutral-600 hover:text-neutral-900 transition-colors">Packages</a>
-              <a href="#faq" className="text-neutral-600 hover:text-neutral-900 transition-colors">FAQ</a>
-              <Button className="bg-brand-600 hover:bg-brand-700 text-white">
-                Get Quote
+
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Home</a>
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Pricing</a>
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Services</a>
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Jurisdictions</a>
+              <a href="#faq" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">FAQ</a>
+              <Button className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 text-sm font-medium rounded-full">
+                Get Started
               </Button>
             </div>
 
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-neutral-600 hover:text-neutral-900"
+                className="text-neutral-600 hover:text-neutral-900 p-2"
               >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -135,15 +136,16 @@ export default function Variation3() {
 
         {/* Mobile menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t bg-white/95 backdrop-blur-md">
+          <div className="md:hidden border-t border-neutral-100 bg-white/95 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 text-neutral-600">Home</a>
-              <a href="#process" className="block px-3 py-2 text-neutral-600">Process</a>
-              <a href="#packages" className="block px-3 py-2 text-neutral-600">Packages</a>
-              <a href="#faq" className="block px-3 py-2 text-neutral-600">FAQ</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Home</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Pricing</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Services</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Jurisdictions</a>
+              <a href="#faq" className="block px-3 py-2 text-sm font-medium text-neutral-600">FAQ</a>
               <div className="px-3 py-2">
-                <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white">
-                  Get Quote
+                <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white rounded-full">
+                  Get Started
                 </Button>
               </div>
             </div>
