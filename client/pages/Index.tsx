@@ -382,8 +382,120 @@ export default function Index() {
         </div>
       </section>
 
+      {/* UAE Jurisdictions Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+              Choose Your UAE Business Jurisdiction
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              Different business setup options to match your specific needs and industry requirements
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8 mb-16">
+            {jurisdictions.map((jurisdiction, index) => (
+              <Card key={index} className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${jurisdiction.popular ? 'ring-2 ring-brand-500 bg-brand-50/30' : 'bg-white'}`}>
+                {jurisdiction.popular && (
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white rounded-full px-4 py-1">
+                    Most Popular
+                  </Badge>
+                )}
+
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                    {jurisdiction.title}
+                  </h3>
+                  <p className="text-neutral-600 mb-4">{jurisdiction.description}</p>
+                  <div className="text-2xl font-bold text-brand-600">{jurisdiction.price}</div>
+                </div>
+
+                <ul className="space-y-3 mb-8">
+                  {jurisdiction.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-center">
+                      <CheckCircle className="w-4 h-4 text-brand-500 mr-3 flex-shrink-0" />
+                      <span className="text-neutral-700 text-sm">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  className={`w-full rounded-xl py-3 font-medium ${jurisdiction.popular ? 'bg-brand-600 hover:bg-brand-700 text-white' : 'bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50'}`}
+                >
+                  Learn More
+                </Button>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Setup Timeline Section */}
+      <section className="py-20 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+              Your Business Setup Journey
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              Simple 5-step process to get your UAE business up and running in just 7-14 days
+            </p>
+          </div>
+
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="hidden md:block absolute top-8 left-0 w-full h-0.5 bg-gradient-to-r from-brand-300 to-brand-500"></div>
+
+            <div className="grid md:grid-cols-5 gap-8">
+              {setupTimeline.map((item, index) => (
+                <div key={index} className="relative text-center">
+                  <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg relative z-10">
+                    {item.step}
+                  </div>
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-2">{item.title}</h3>
+                  <p className="text-neutral-600 text-sm mb-2">{item.description}</p>
+                  <Badge className="bg-brand-100 text-brand-700 text-xs">{item.duration}</Badge>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Document Checklist Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+              Required Documents Checklist
+            </h2>
+            <p className="text-xl text-neutral-600">
+              Prepare these documents to speed up your business setup process
+            </p>
+          </div>
+
+          <Card className="p-8 bg-neutral-50 rounded-2xl">
+            <div className="grid md:grid-cols-2 gap-6">
+              {documentChecklist.map((document, index) => (
+                <div key={index} className="flex items-start">
+                  <FileText className="w-5 h-5 text-brand-500 mr-3 flex-shrink-0 mt-0.5" />
+                  <span className="text-neutral-700">{document}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center">
+              <Button className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-3 rounded-xl">
+                Download Complete Checklist
+              </Button>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-white">
+      <section id="pricing" className="py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-neutral-900 mb-4">
