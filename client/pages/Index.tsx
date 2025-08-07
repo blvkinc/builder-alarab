@@ -215,8 +215,8 @@ export default function Index() {
 
             {/* Right Form */}
             <div className="lg:pl-8">
-              <Card className="p-8 bg-white/95 backdrop-blur-sm shadow-2xl">
-                <h3 className="text-2xl font-bold text-neutral-900 mb-6 text-center">
+              <Card className="p-8 bg-white/90 backdrop-blur-sm shadow-xl border-0 rounded-2xl">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
                   Get Your Free Quote
                 </h3>
                 
