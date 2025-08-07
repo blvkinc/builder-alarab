@@ -188,16 +188,16 @@ export default function Index() {
                 so you can focus on growing your business.
               </p>
               
-              <div className="space-y-4 mb-8">
+              <div className="space-y-3 mb-10">
                 {[
                   "Free consultation & business planning",
-                  "100% government-approved processes", 
+                  "100% government-approved processes",
                   "Fast 7-14 day setup completion",
                   "Ongoing business support & compliance"
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
-                    <CheckCircle className="w-5 h-5 text-brand-500 mr-3 flex-shrink-0" />
-                    <span className="text-neutral-200">{feature}</span>
+                    <CheckCircle className="w-4 h-4 text-brand-500 mr-3 flex-shrink-0" />
+                    <span className="text-neutral-600 text-lg">{feature}</span>
                   </div>
                 ))}
               </div>
