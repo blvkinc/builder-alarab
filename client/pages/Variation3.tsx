@@ -4,7 +4,19 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle, Clock, Phone, Mail, MapPin, Menu, X, Zap, Trophy, Heart } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Phone,
+  Mail,
+  MapPin,
+  Menu,
+  X,
+  Zap,
+  Trophy,
+  Heart,
+} from "lucide-react";
 
 export default function Variation3() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,23 +33,27 @@ export default function Variation3() {
     {
       step: "01",
       title: "Consultation",
-      description: "Free expert consultation to understand your business needs and requirements"
+      description:
+        "Free expert consultation to understand your business needs and requirements",
     },
     {
-      step: "02", 
+      step: "02",
       title: "Documentation",
-      description: "We prepare and submit all required documents to government authorities"
+      description:
+        "We prepare and submit all required documents to government authorities",
     },
     {
       step: "03",
       title: "Approval",
-      description: "Track your application status and receive approvals from relevant departments"
+      description:
+        "Track your application status and receive approvals from relevant departments",
     },
     {
       step: "04",
       title: "Launch",
-      description: "Your business is ready! Get your license, visa, and bank account"
-    }
+      description:
+        "Your business is ready! Get your license, visa, and bank account",
+    },
   ];
 
   const packages = [
@@ -48,15 +64,15 @@ export default function Variation3() {
       description: "Perfect for freelancers and small businesses",
       features: [
         "Trade License Processing",
-        "Emirates ID Support", 
+        "Emirates ID Support",
         "Basic Bank Account",
-        "Email Support"
+        "Email Support",
       ],
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-500 to-cyan-500",
     },
     {
       icon: <Trophy className="w-8 h-8" />,
-      title: "Professional Package", 
+      title: "Professional Package",
       price: "AED 13,131",
       description: "Ideal for growing businesses",
       features: [
@@ -64,40 +80,43 @@ export default function Variation3() {
         "PRO Processing",
         "Multiple Bank Options",
         "Phone Support",
-        "Legal Consultation"
+        "Legal Consultation",
       ],
       color: "from-brand-500 to-yellow-500",
-      popular: true
+      popular: true,
     },
     {
       icon: <Heart className="w-8 h-8" />,
       title: "Enterprise Package",
-      price: "AED 27,000", 
+      price: "AED 27,000",
       description: "For large corporations",
       features: [
         "Everything in Professional",
         "Dedicated Manager",
         "Priority Processing",
         "24/7 Support",
-        "Custom Solutions"
+        "Custom Solutions",
       ],
-      color: "from-purple-500 to-pink-500"
-    }
+      color: "from-purple-500 to-pink-500",
+    },
   ];
 
   const faqs = [
     {
       question: "How long does it take to set up a business in UAE?",
-      answer: "Typically 7-14 working days depending on the business type and documentation."
+      answer:
+        "Typically 7-14 working days depending on the business type and documentation.",
     },
     {
       question: "Do I need a local partner to start a business in UAE?",
-      answer: "No, in designated free zones you can have 100% foreign ownership."
+      answer:
+        "No, in designated free zones you can have 100% foreign ownership.",
     },
     {
       question: "What are the costs involved in setting up a business?",
-      answer: "Costs vary based on business type, location, and services required. Our packages start from AED 6,000."
-    }
+      answer:
+        "Costs vary based on business type, location, and services required. Our packages start from AED 6,000.",
+    },
   ];
 
   return (
@@ -113,11 +132,36 @@ export default function Variation3() {
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Home</a>
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Pricing</a>
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Services</a>
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Jurisdictions</a>
-              <a href="#faq" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">FAQ</a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Jurisdictions
+              </a>
+              <a
+                href="#faq"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                FAQ
+              </a>
               <Button className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 text-sm font-medium rounded-full">
                 Get Started
               </Button>
@@ -128,7 +172,11 @@ export default function Variation3() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-neutral-600 hover:text-neutral-900 p-2"
               >
-                {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {isMenuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </button>
             </div>
           </div>
@@ -138,11 +186,36 @@ export default function Variation3() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-neutral-100 bg-white/95 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Home</a>
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Pricing</a>
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Services</a>
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Jurisdictions</a>
-              <a href="#faq" className="block px-3 py-2 text-sm font-medium text-neutral-600">FAQ</a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Home
+              </a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Jurisdictions
+              </a>
+              <a
+                href="#faq"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                FAQ
+              </a>
               <div className="px-3 py-2">
                 <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white rounded-full">
                   Get Started
@@ -182,7 +255,7 @@ export default function Variation3() {
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-50 via-orange-50 to-yellow-50"></div>
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent"></div>
-        
+
         {/* Decorative Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-brand-200/30 rounded-full blur-xl"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-yellow-200/30 rounded-full blur-xl"></div>
@@ -193,26 +266,36 @@ export default function Variation3() {
             <Badge className="mb-6 bg-brand-600/10 text-brand-700 border-brand-200">
               ⚡ Fastest Business Setup in UAE
             </Badge>
-            
+
             <h1 className="text-5xl lg:text-7xl font-bold text-neutral-900 mb-6 leading-tight">
-              Launch Your<br />
+              Launch Your
+              <br />
               <span className="bg-gradient-to-r from-brand-600 to-orange-500 bg-clip-text text-transparent">
                 Dream Business
-              </span><br />
+              </span>
+              <br />
               in the UAE
             </h1>
-            
+
             <p className="text-xl lg:text-2xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              From startup to enterprise, we make business setup simple, fast, and stress-free. 
-              Join 10,000+ successful entrepreneurs who chose us as their trusted partner.
+              From startup to enterprise, we make business setup simple, fast,
+              and stress-free. Join 10,000+ successful entrepreneurs who chose
+              us as their trusted partner.
             </p>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-              <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg shadow-lg">
+              <Button
+                size="lg"
+                className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg shadow-lg"
+              >
                 Get Started Free
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-              <Button size="lg" variant="outline" className="border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50 px-8 py-4 text-lg">
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50 px-8 py-4 text-lg"
+              >
                 Watch Demo
               </Button>
             </div>
@@ -267,7 +350,8 @@ export default function Variation3() {
               Simple 4-Step Process
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-              We've streamlined the business setup process to get you started quickly and efficiently
+              We've streamlined the business setup process to get you started
+              quickly and efficiently
             </p>
           </div>
 
@@ -282,8 +366,12 @@ export default function Variation3() {
                     <div className="hidden md:block absolute top-8 left-1/2 w-full h-0.5 bg-gradient-to-r from-brand-300 to-orange-300 transform translate-x-8"></div>
                   )}
                 </div>
-                <h3 className="text-xl font-semibold text-neutral-900 mb-3">{step.title}</h3>
-                <p className="text-neutral-600 leading-relaxed">{step.description}</p>
+                <h3 className="text-xl font-semibold text-neutral-900 mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  {step.description}
+                </p>
               </div>
             ))}
           </div>
@@ -291,33 +379,46 @@ export default function Variation3() {
       </section>
 
       {/* Packages Section */}
-      <section id="packages" className="py-20 bg-gradient-to-br from-neutral-50 to-brand-50/30">
+      <section
+        id="packages"
+        className="py-20 bg-gradient-to-br from-neutral-50 to-brand-50/30"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-neutral-900 mb-4">
               Choose Your Perfect Package
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-              Tailored solutions for every business size and requirement. All packages include expert support.
+              Tailored solutions for every business size and requirement. All
+              packages include expert support.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {packages.map((pkg, index) => (
-              <Card key={index} className={`relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${pkg.popular ? 'ring-2 ring-brand-500' : ''}`}>
+              <Card
+                key={index}
+                className={`relative p-8 bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 ${pkg.popular ? "ring-2 ring-brand-500" : ""}`}
+              >
                 {pkg.popular && (
                   <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white">
                     Most Popular
                   </Badge>
                 )}
-                
-                <div className={`w-16 h-16 bg-gradient-to-br ${pkg.color} rounded-xl flex items-center justify-center mx-auto mb-6 text-white`}>
+
+                <div
+                  className={`w-16 h-16 bg-gradient-to-br ${pkg.color} rounded-xl flex items-center justify-center mx-auto mb-6 text-white`}
+                >
                   {pkg.icon}
                 </div>
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-xl font-bold text-neutral-900 mb-2">{pkg.title}</h3>
-                  <div className="text-3xl font-bold text-neutral-900 mb-2">{pkg.price}</div>
+                  <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                    {pkg.title}
+                  </h3>
+                  <div className="text-3xl font-bold text-neutral-900 mb-2">
+                    {pkg.price}
+                  </div>
                   <p className="text-neutral-600">{pkg.description}</p>
                 </div>
 
@@ -330,7 +431,9 @@ export default function Variation3() {
                   ))}
                 </ul>
 
-                <Button className={`w-full ${pkg.popular ? 'bg-brand-600 hover:bg-brand-700 text-white' : 'bg-white border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50'}`}>
+                <Button
+                  className={`w-full ${pkg.popular ? "bg-brand-600 hover:bg-brand-700 text-white" : "bg-white border-2 border-neutral-300 text-neutral-700 hover:bg-neutral-50"}`}
+                >
                   Choose Package
                 </Button>
               </Card>
@@ -347,19 +450,20 @@ export default function Variation3() {
               Get Your Free Quote in 30 Seconds
             </h2>
             <p className="text-xl text-brand-100">
-              No hidden fees, no commitments. Just honest pricing for your business setup.
+              No hidden fees, no commitments. Just honest pricing for your
+              business setup.
             </p>
           </div>
 
           <Card className="p-8 bg-white/10 backdrop-blur-sm border-white/20">
             <form className="grid md:grid-cols-4 gap-4">
-              <Input 
-                placeholder="Your Name" 
+              <Input
+                placeholder="Your Name"
                 className="bg-white/20 border-white/30 text-white placeholder-white/70 focus:bg-white/30"
               />
-              <Input 
-                type="email" 
-                placeholder="Email Address" 
+              <Input
+                type="email"
+                placeholder="Email Address"
                 className="bg-white/20 border-white/30 text-white placeholder-white/70 focus:bg-white/30"
               />
               <select className="px-3 py-2 bg-white/20 border border-white/30 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-white/50">
@@ -391,13 +495,14 @@ export default function Variation3() {
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
-              <Card key={index} className="p-6 border border-neutral-200 hover:shadow-md transition-shadow">
+              <Card
+                key={index}
+                className="p-6 border border-neutral-200 hover:shadow-md transition-shadow"
+              >
                 <h3 className="text-lg font-semibold text-neutral-900 mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <p className="text-neutral-600 leading-relaxed">{faq.answer}</p>
               </Card>
             ))}
           </div>
@@ -411,9 +516,13 @@ export default function Variation3() {
             Your Gateway to UAE Business Setup
           </h2>
           <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-            Join the thousands of entrepreneurs who have successfully launched their businesses in the UAE with our expert guidance.
+            Join the thousands of entrepreneurs who have successfully launched
+            their businesses in the UAE with our expert guidance.
           </p>
-          <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg">
+          <Button
+            size="lg"
+            className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg"
+          >
             Start Your Journey Today
             <ArrowRight className="w-5 h-5 ml-2" />
           </Button>
@@ -431,9 +540,15 @@ export default function Variation3() {
               Your trusted partner for business setup in the UAE
             </p>
             <div className="flex justify-center space-x-6 text-sm text-neutral-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Contact Us</a>
+              <a href="#" className="hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Contact Us
+              </a>
             </div>
           </div>
         </div>

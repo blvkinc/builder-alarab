@@ -4,7 +4,22 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, CheckCircle, Users, Globe, Shield, Star, Menu, X, MessageCircle, Clock, FileText, Award, Building2, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Globe,
+  Shield,
+  Star,
+  Menu,
+  X,
+  MessageCircle,
+  Clock,
+  FileText,
+  Award,
+  Building2,
+  Phone,
+} from "lucide-react";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,10 +41,26 @@ export default function Index() {
   ];
 
   const trustIndicators = [
-    { icon: <Award className="w-6 h-6" />, title: "DED Approved", description: "Authorized by Dubai Department of Economic Development" },
-    { icon: <Shield className="w-6 h-6" />, title: "100% Legal Compliance", description: "Full government approval and registration" },
-    { icon: <Star className="w-6 h-6" />, title: "5-Star Rated", description: "Trusted by 10,000+ successful entrepreneurs" },
-    { icon: <Clock className="w-6 h-6" />, title: "7-Day Setup", description: "Fastest business registration in UAE" },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "DED Approved",
+      description: "Authorized by Dubai Department of Economic Development",
+    },
+    {
+      icon: <Shield className="w-6 h-6" />,
+      title: "100% Legal Compliance",
+      description: "Full government approval and registration",
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: "5-Star Rated",
+      description: "Trusted by 10,000+ successful entrepreneurs",
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "7-Day Setup",
+      description: "Fastest business registration in UAE",
+    },
   ];
 
   const jurisdictions = [
@@ -38,30 +69,59 @@ export default function Index() {
       description: "100% foreign ownership, zero tax",
       features: ["DMCC", "JAFZA", "DAFZA", "IFZA"],
       price: "From AED 8,500",
-      popular: true
+      popular: true,
     },
     {
       title: "Dubai Mainland",
       description: "Trade anywhere in UAE & GCC",
-      features: ["Local Partner Required", "Wider Business Scope", "Government Contracts"],
+      features: [
+        "Local Partner Required",
+        "Wider Business Scope",
+        "Government Contracts",
+      ],
       price: "From AED 15,000",
-      popular: false
+      popular: false,
     },
     {
       title: "Abu Dhabi Global Market",
       description: "International financial center",
       features: ["Financial Services", "Asset Management", "FinTech"],
       price: "From AED 12,000",
-      popular: false
-    }
+      popular: false,
+    },
   ];
 
   const setupTimeline = [
-    { step: "1", title: "Free Consultation", description: "Discuss your business goals and requirements", duration: "30 minutes" },
-    { step: "2", title: "Document Preparation", description: "Prepare and notarize all required documents", duration: "1-2 days" },
-    { step: "3", title: "License Application", description: "Submit application to relevant authorities", duration: "3-5 days" },
-    { step: "4", title: "Approvals & Setup", description: "Receive approvals and complete registration", duration: "2-3 days" },
-    { step: "5", title: "Bank Account & Visa", description: "Open bank account and process visas", duration: "5-7 days" }
+    {
+      step: "1",
+      title: "Free Consultation",
+      description: "Discuss your business goals and requirements",
+      duration: "30 minutes",
+    },
+    {
+      step: "2",
+      title: "Document Preparation",
+      description: "Prepare and notarize all required documents",
+      duration: "1-2 days",
+    },
+    {
+      step: "3",
+      title: "License Application",
+      description: "Submit application to relevant authorities",
+      duration: "3-5 days",
+    },
+    {
+      step: "4",
+      title: "Approvals & Setup",
+      description: "Receive approvals and complete registration",
+      duration: "2-3 days",
+    },
+    {
+      step: "5",
+      title: "Bank Account & Visa",
+      description: "Open bank account and process visas",
+      duration: "5-7 days",
+    },
   ];
 
   const documentChecklist = [
@@ -72,7 +132,7 @@ export default function Index() {
     "Business plan and activity description",
     "Initial approval certificate",
     "Memorandum of Association",
-    "Lease agreement (if applicable)"
+    "Lease agreement (if applicable)",
   ];
 
   const pricingPlans = [
@@ -85,12 +145,12 @@ export default function Index() {
         "Emirates ID Processing",
         "Bank Account Opening",
         "VAT Registration",
-        "Basic Support"
+        "Basic Support",
       ],
-      isPopular: false
+      isPopular: false,
     },
     {
-      name: "PROFESSIONAL", 
+      name: "PROFESSIONAL",
       price: "AED 13,131",
       description: "Most popular choice",
       features: [
@@ -99,9 +159,9 @@ export default function Index() {
         "Legal Consultation",
         "Document Attestation",
         "Premium Support",
-        "Office Space Assistance"
+        "Office Space Assistance",
       ],
-      isPopular: true
+      isPopular: true,
     },
     {
       name: "ENTERPRISE",
@@ -113,28 +173,30 @@ export default function Index() {
         "Custom Solutions",
         "24/7 Support",
         "Compliance Management",
-        "Multi-location Setup"
+        "Multi-location Setup",
       ],
-      isPopular: false
-    }
+      isPopular: false,
+    },
   ];
 
   const benefits = [
     {
       icon: <Globe className="w-6 h-6" />,
       title: "100% Foreign Ownership",
-      description: "Own your business completely without local partnership requirements"
+      description:
+        "Own your business completely without local partnership requirements",
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Tax-Free Environment", 
-      description: "Zero corporate and personal income tax in designated free zones"
+      title: "Tax-Free Environment",
+      description:
+        "Zero corporate and personal income tax in designated free zones",
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Strategic Location",
-      description: "Gateway to Middle East, Africa, and Asia markets"
-    }
+      description: "Gateway to Middle East, Africa, and Asia markets",
+    },
   ];
 
   return (
@@ -150,11 +212,36 @@ export default function Index() {
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Home</a>
-              <a href="#pricing" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Pricing</a>
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Services</a>
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Jurisdictions</a>
-              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">FAQ</a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Home
+              </a>
+              <a
+                href="#pricing"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                Jurisdictions
+              </a>
+              <a
+                href="#"
+                className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+              >
+                FAQ
+              </a>
               <Button className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 text-sm font-medium rounded-full">
                 Get Started
               </Button>
@@ -165,7 +252,11 @@ export default function Index() {
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="text-neutral-600 hover:text-neutral-900 p-2"
               >
-                {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {isMenuOpen ? (
+                  <X className="w-5 h-5" />
+                ) : (
+                  <Menu className="w-5 h-5" />
+                )}
               </button>
             </div>
           </div>
@@ -175,11 +266,36 @@ export default function Index() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-neutral-100 bg-white/95 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Home</a>
-              <a href="#pricing" className="block px-3 py-2 text-sm font-medium text-neutral-600">Pricing</a>
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Services</a>
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">Jurisdictions</a>
-              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-600">FAQ</a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Home
+              </a>
+              <a
+                href="#pricing"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Services
+              </a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                Jurisdictions
+              </a>
+              <a
+                href="#"
+                className="block px-3 py-2 text-sm font-medium text-neutral-600"
+              >
+                FAQ
+              </a>
               <div className="px-3 py-2">
                 <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white rounded-full">
                   Get Started
@@ -217,7 +333,7 @@ export default function Index() {
       {/* Hero Section */}
       <section className="relative bg-white text-neutral-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-brand-50/20"></div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -227,23 +343,27 @@ export default function Index() {
               </Badge>
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
-                Start Your Business<br />
-                in the <span className="text-brand-600">UAE</span><br />
-                <span className="text-neutral-500 font-normal">with Confidence</span>
+                Start Your Business
+                <br />
+                in the <span className="text-brand-600">UAE</span>
+                <br />
+                <span className="text-neutral-500 font-normal">
+                  with Confidence
+                </span>
               </h1>
 
               <p className="text-xl text-neutral-600 mb-10 leading-relaxed max-w-lg">
-                Complete business setup solutions with expert guidance.
-                From licensing to bank accounts, we handle everything
-                so you can focus on growing your business.
+                Complete business setup solutions with expert guidance. From
+                licensing to bank accounts, we handle everything so you can
+                focus on growing your business.
               </p>
-              
+
               <div className="space-y-3 mb-10">
                 {[
                   "Free consultation & business planning",
                   "100% government-approved processes",
                   "Fast 7-14 day setup completion",
-                  "Ongoing business support & compliance"
+                  "Ongoing business support & compliance",
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center">
                     <CheckCircle className="w-4 h-4 text-brand-500 mr-3 flex-shrink-0" />
@@ -251,13 +371,20 @@ export default function Index() {
                   </div>
                 ))}
               </div>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all">
+                <Button
+                  size="lg"
+                  className="bg-brand-600 hover:bg-brand-700 text-white px-8 py-4 text-lg rounded-full shadow-lg hover:shadow-xl transition-all"
+                >
                   Get Started Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-2 border-green-500 text-green-600 hover:bg-green-50 px-8 py-4 text-lg rounded-full">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-2 border-green-500 text-green-600 hover:bg-green-50 px-8 py-4 text-lg rounded-full"
+                >
                   <MessageCircle className="w-5 h-5 mr-2" />
                   WhatsApp Consultation
                 </Button>
@@ -274,7 +401,7 @@ export default function Index() {
                 <h3 className="text-2xl font-bold text-neutral-900 mb-8 text-center">
                   Get Your Free Quote
                 </h3>
-                
+
                 <form className="space-y-6">
                   <div>
                     <label className="block text-sm font-medium text-neutral-700 mb-3">
@@ -328,7 +455,7 @@ export default function Index() {
                   <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-medium">
                     Get Free Consultation
                   </Button>
-                  
+
                   <p className="text-xs text-neutral-500 text-center">
                     By submitting, you agree to our Terms & Privacy Policy
                   </p>
@@ -357,8 +484,12 @@ export default function Index() {
                 <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-600">
                   {indicator.icon}
                 </div>
-                <h3 className="font-semibold text-neutral-900 mb-2">{indicator.title}</h3>
-                <p className="text-sm text-neutral-600">{indicator.description}</p>
+                <h3 className="font-semibold text-neutral-900 mb-2">
+                  {indicator.title}
+                </h3>
+                <p className="text-sm text-neutral-600">
+                  {indicator.description}
+                </p>
               </div>
             ))}
           </div>
@@ -375,7 +506,9 @@ export default function Index() {
             {partners.map((partner, index) => (
               <div key={index} className="flex items-center space-x-2 text-2xl">
                 <span>{partner.logo}</span>
-                <span className="font-medium text-neutral-700">{partner.name}</span>
+                <span className="font-medium text-neutral-700">
+                  {partner.name}
+                </span>
               </div>
             ))}
           </div>
@@ -390,13 +523,17 @@ export default function Index() {
               Choose Your UAE Business Jurisdiction
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-              Different business setup options to match your specific needs and industry requirements
+              Different business setup options to match your specific needs and
+              industry requirements
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 mb-16">
             {jurisdictions.map((jurisdiction, index) => (
-              <Card key={index} className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${jurisdiction.popular ? 'ring-2 ring-brand-500 bg-brand-50/30' : 'bg-white'}`}>
+              <Card
+                key={index}
+                className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${jurisdiction.popular ? "ring-2 ring-brand-500 bg-brand-50/30" : "bg-white"}`}
+              >
                 {jurisdiction.popular && (
                   <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white rounded-full px-4 py-1">
                     Most Popular
@@ -407,21 +544,27 @@ export default function Index() {
                   <h3 className="text-xl font-bold text-neutral-900 mb-2">
                     {jurisdiction.title}
                   </h3>
-                  <p className="text-neutral-600 mb-4">{jurisdiction.description}</p>
-                  <div className="text-2xl font-bold text-brand-600">{jurisdiction.price}</div>
+                  <p className="text-neutral-600 mb-4">
+                    {jurisdiction.description}
+                  </p>
+                  <div className="text-2xl font-bold text-brand-600">
+                    {jurisdiction.price}
+                  </div>
                 </div>
 
                 <ul className="space-y-3 mb-8">
                   {jurisdiction.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center">
                       <CheckCircle className="w-4 h-4 text-brand-500 mr-3 flex-shrink-0" />
-                      <span className="text-neutral-700 text-sm">{feature}</span>
+                      <span className="text-neutral-700 text-sm">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
 
                 <Button
-                  className={`w-full rounded-xl py-3 font-medium ${jurisdiction.popular ? 'bg-brand-600 hover:bg-brand-700 text-white' : 'bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50'}`}
+                  className={`w-full rounded-xl py-3 font-medium ${jurisdiction.popular ? "bg-brand-600 hover:bg-brand-700 text-white" : "bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50"}`}
                 >
                   Learn More
                 </Button>
@@ -439,7 +582,8 @@ export default function Index() {
               Your Business Setup Journey
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-              Simple 5-step process to get your UAE business up and running in just 7-14 days
+              Simple 5-step process to get your UAE business up and running in
+              just 7-14 days
             </p>
           </div>
 
@@ -453,9 +597,15 @@ export default function Index() {
                   <div className="w-16 h-16 bg-brand-600 rounded-full flex items-center justify-center mx-auto mb-4 text-white font-bold text-lg relative z-10">
                     {item.step}
                   </div>
-                  <h3 className="text-lg font-semibold text-neutral-900 mb-2">{item.title}</h3>
-                  <p className="text-neutral-600 text-sm mb-2">{item.description}</p>
-                  <Badge className="bg-brand-100 text-brand-700 text-xs">{item.duration}</Badge>
+                  <h3 className="text-lg font-semibold text-neutral-900 mb-2">
+                    {item.title}
+                  </h3>
+                  <p className="text-neutral-600 text-sm mb-2">
+                    {item.description}
+                  </p>
+                  <Badge className="bg-brand-100 text-brand-700 text-xs">
+                    {item.duration}
+                  </Badge>
                 </div>
               ))}
             </div>
@@ -502,13 +652,17 @@ export default function Index() {
               A perfect plan for your business
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-              Choose the package that best fits your business needs. All plans include expert guidance and government-approved processes.
+              Choose the package that best fits your business needs. All plans
+              include expert guidance and government-approved processes.
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${plan.isPopular ? 'ring-2 ring-brand-500 bg-brand-50/30' : 'bg-white'}`}>
+              <Card
+                key={index}
+                className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${plan.isPopular ? "ring-2 ring-brand-500 bg-brand-50/30" : "bg-white"}`}
+              >
                 {plan.isPopular && (
                   <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white rounded-full px-4 py-1">
                     Most Popular
@@ -529,13 +683,15 @@ export default function Index() {
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
                       <CheckCircle className="w-4 h-4 text-brand-500 mr-3 flex-shrink-0 mt-1" />
-                      <span className="text-neutral-700 text-sm">{feature}</span>
+                      <span className="text-neutral-700 text-sm">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
 
                 <Button
-                  className={`w-full rounded-xl py-3 font-medium ${plan.isPopular ? 'bg-brand-600 hover:bg-brand-700 text-white' : 'bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50'}`}
+                  className={`w-full rounded-xl py-3 font-medium ${plan.isPopular ? "bg-brand-600 hover:bg-brand-700 text-white" : "bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50"}`}
                 >
                   Get Started
                 </Button>
@@ -556,7 +712,8 @@ export default function Index() {
               Trusted by 10,000+ Successful Entrepreneurs
             </h2>
             <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
-              See how we've helped businesses like yours establish and thrive in the UAE
+              See how we've helped businesses like yours establish and thrive in
+              the UAE
             </p>
           </div>
 
@@ -567,14 +724,22 @@ export default function Index() {
                   MR
                 </div>
                 <div>
-                  <div className="font-semibold text-white">Mohammed Rahman</div>
-                  <div className="text-sm text-neutral-400">Tech Solutions DMCC</div>
+                  <div className="font-semibold text-white">
+                    Mohammed Rahman
+                  </div>
+                  <div className="text-sm text-neutral-400">
+                    Tech Solutions DMCC
+                  </div>
                 </div>
               </div>
               <p className="text-neutral-300 leading-relaxed italic mb-4">
-                "UAE Business Setup made our company formation incredibly smooth. We were operational in Dubai within 8 days, and their team handled everything from licensing to bank account opening."
+                "UAE Business Setup made our company formation incredibly
+                smooth. We were operational in Dubai within 8 days, and their
+                team handled everything from licensing to bank account opening."
               </p>
-              <div className="text-brand-400 text-sm">⭐⭐⭐⭐⭐ Setup completed in 8 days</div>
+              <div className="text-brand-400 text-sm">
+                ⭐⭐⭐⭐⭐ Setup completed in 8 days
+              </div>
             </Card>
 
             <Card className="p-8 bg-neutral-800/50 border-neutral-700">
@@ -584,13 +749,19 @@ export default function Index() {
                 </div>
                 <div>
                   <div className="font-semibold text-white">Sarah Johnson</div>
-                  <div className="text-sm text-neutral-400">Global Trading LLC</div>
+                  <div className="text-sm text-neutral-400">
+                    Global Trading LLC
+                  </div>
                 </div>
               </div>
               <p className="text-neutral-300 leading-relaxed italic mb-4">
-                "Professional service from start to finish. They guided us through mainland setup, helped with local partner arrangements, and we're now trading across the entire GCC region."
+                "Professional service from start to finish. They guided us
+                through mainland setup, helped with local partner arrangements,
+                and we're now trading across the entire GCC region."
               </p>
-              <div className="text-brand-400 text-sm">⭐⭐⭐⭐⭐ AED 2.5M annual revenue</div>
+              <div className="text-brand-400 text-sm">
+                ⭐⭐⭐⭐⭐ AED 2.5M annual revenue
+              </div>
             </Card>
 
             <Card className="p-8 bg-neutral-800/50 border-neutral-700">
@@ -600,13 +771,19 @@ export default function Index() {
                 </div>
                 <div>
                   <div className="font-semibold text-white">David Kim</div>
-                  <div className="text-sm text-neutral-400">FinTech Innovations</div>
+                  <div className="text-sm text-neutral-400">
+                    FinTech Innovations
+                  </div>
                 </div>
               </div>
               <p className="text-neutral-300 leading-relaxed italic mb-4">
-                "Exceptional support for our ADGM license. Their expertise in financial services regulations saved us months of back-and-forth with authorities. Highly recommended!"
+                "Exceptional support for our ADGM license. Their expertise in
+                financial services regulations saved us months of back-and-forth
+                with authorities. Highly recommended!"
               </p>
-              <div className="text-brand-400 text-sm">⭐⭐⭐⭐⭐ ADGM License approved</div>
+              <div className="text-brand-400 text-sm">
+                ⭐⭐⭐⭐⭐ ADGM License approved
+              </div>
             </Card>
           </div>
 
@@ -618,7 +795,9 @@ export default function Index() {
                   {benefit.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
-                <p className="text-neutral-300 leading-relaxed">{benefit.description}</p>
+                <p className="text-neutral-300 leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
             ))}
           </div>
@@ -632,13 +811,20 @@ export default function Index() {
             Ready to Start Your Business in the Emirates?
           </h2>
           <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of successful entrepreneurs who chose UAE as their business destination. Get expert guidance from start to finish.
+            Join thousands of successful entrepreneurs who chose UAE as their
+            business destination. Get expert guidance from start to finish.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <Button size="lg" className="bg-white text-brand-600 hover:bg-neutral-100 px-8 py-4 rounded-xl">
+            <Button
+              size="lg"
+              className="bg-white text-brand-600 hover:bg-neutral-100 px-8 py-4 rounded-xl"
+            >
               Schedule Free Consultation
             </Button>
-            <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl">
+            <Button
+              size="lg"
+              className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl"
+            >
               <MessageCircle className="w-5 h-5 mr-2" />
               WhatsApp Now
             </Button>
@@ -667,9 +853,15 @@ export default function Index() {
               Your trusted partner for business setup in the UAE
             </p>
             <div className="flex justify-center space-x-6 text-sm text-neutral-400">
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-              <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-white transition-colors">Contact Us</a>
+              <a href="#" className="hover:text-white transition-colors">
+                Privacy Policy
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Terms of Service
+              </a>
+              <a href="#" className="hover:text-white transition-colors">
+                Contact Us
+              </a>
             </div>
           </div>
         </div>
