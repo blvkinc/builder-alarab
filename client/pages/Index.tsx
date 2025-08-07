@@ -315,18 +315,18 @@ export default function Index() {
 
           <div className="grid md:grid-cols-3 gap-8">
             {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative p-8 ${plan.isPopular ? 'ring-2 ring-brand-500 shadow-lg' : 'border border-neutral-200'}`}>
+              <Card key={index} className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${plan.isPopular ? 'ring-2 ring-brand-500 bg-brand-50/30' : 'bg-white'}`}>
                 {plan.isPopular && (
-                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white">
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white rounded-full px-4 py-1">
                     Most Popular
                   </Badge>
                 )}
-                
+
                 <div className="text-center mb-8">
-                  <h3 className="text-sm font-semibold text-neutral-600 uppercase tracking-wide mb-2">
+                  <h3 className="text-sm font-semibold text-neutral-600 uppercase tracking-wide mb-4">
                     {plan.name}
                   </h3>
-                  <div className="text-4xl font-bold text-neutral-900 mb-2">
+                  <div className="text-4xl font-bold text-neutral-900 mb-3">
                     {plan.price}
                   </div>
                   <p className="text-neutral-600">{plan.description}</p>
@@ -335,14 +335,14 @@ export default function Index() {
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-start">
-                      <CheckCircle className="w-5 h-5 text-brand-500 mr-3 flex-shrink-0 mt-0.5" />
-                      <span className="text-neutral-700">{feature}</span>
+                      <CheckCircle className="w-4 h-4 text-brand-500 mr-3 flex-shrink-0 mt-1" />
+                      <span className="text-neutral-700 text-sm">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
-                <Button 
-                  className={`w-full ${plan.isPopular ? 'bg-brand-600 hover:bg-brand-700 text-white' : 'bg-white border border-neutral-300 text-neutral-700 hover:bg-neutral-50'}`}
+                <Button
+                  className={`w-full rounded-xl py-3 font-medium ${plan.isPopular ? 'bg-brand-600 hover:bg-brand-700 text-white' : 'bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50'}`}
                 >
                   Get Started
                 </Button>
