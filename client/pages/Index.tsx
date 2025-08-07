@@ -583,16 +583,27 @@ export default function Index() {
           <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
             Join thousands of successful entrepreneurs who chose UAE as their business destination. Get expert guidance from start to finish.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-brand-600 hover:bg-neutral-100 px-8 py-4">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <Button size="lg" className="bg-white text-brand-600 hover:bg-neutral-100 px-8 py-4 rounded-xl">
               Schedule Free Consultation
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-brand-600 px-8 py-4">
-              Download Guide
+            <Button size="lg" className="bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-xl">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              WhatsApp Now
             </Button>
+          </div>
+          <div className="text-brand-100 text-sm">
+            📞 +971 4 123 4567 • 📧 hello@uaebusiness.ae • ⏰ Available 24/7
           </div>
         </div>
       </section>
+
+      {/* Floating WhatsApp Button */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <Button className="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110">
+          <MessageCircle className="w-6 h-6" />
+        </Button>
+      </div>
 
       {/* Footer */}
       <footer className="bg-neutral-900 text-white py-12">
