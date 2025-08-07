@@ -222,45 +222,45 @@ export default function Index() {
                 
                 <form className="space-y-6">
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                    <label className="block text-sm font-medium text-neutral-700 mb-3">
                       Full Name *
                     </label>
-                    <Input 
-                      placeholder="Enter your full name" 
-                      className="w-full"
+                    <Input
+                      placeholder="Enter your full name"
+                      className="w-full rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500/20 py-3"
                       required
                     />
                   </div>
-                  
+
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                    <label className="block text-sm font-medium text-neutral-700 mb-3">
                       Email Address *
                     </label>
-                    <Input 
-                      type="email" 
-                      placeholder="your@email.com" 
-                      className="w-full"
+                    <Input
+                      type="email"
+                      placeholder="your@email.com"
+                      className="w-full rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500/20 py-3"
                       required
                     />
                   </div>
-                  
+
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                    <label className="block text-sm font-medium text-neutral-700 mb-3">
                       Phone Number *
                     </label>
-                    <Input 
-                      type="tel" 
-                      placeholder="+971 50 123 4567" 
-                      className="w-full"
+                    <Input
+                      type="tel"
+                      placeholder="+971 50 123 4567"
+                      className="w-full rounded-xl border-neutral-200 focus:border-brand-500 focus:ring-brand-500/20 py-3"
                       required
                     />
                   </div>
-                  
+
                   <div>
-                    <label className="block text-sm font-medium text-neutral-700 mb-2">
+                    <label className="block text-sm font-medium text-neutral-700 mb-3">
                       Business Type
                     </label>
-                    <select className="w-full px-3 py-2 border border-neutral-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent">
+                    <select className="w-full px-4 py-3 border border-neutral-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-brand-500/20 focus:border-brand-500">
                       <option>Select business type</option>
                       <option>Trading</option>
                       <option>Consulting</option>
@@ -269,8 +269,8 @@ export default function Index() {
                       <option>Other</option>
                     </select>
                   </div>
-                  
-                  <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white py-3">
+
+                  <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white py-4 rounded-xl font-medium">
                     Get Free Consultation
                   </Button>
                   
