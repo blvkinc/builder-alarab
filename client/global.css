@@ -116,6 +116,30 @@
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Dark Mode Brand Colors */
+    --brand-50: 33 100% 96%;
+    --brand-100: 34 100% 92%;
+    --brand-200: 32 98% 83%;
+    --brand-300: 31 97% 72%;
+    --brand-400: 27 96% 61%;
+    --brand-500: 25 95% 53%;
+    --brand-600: 21 90% 48%;
+    --brand-700: 17 88% 40%;
+    --brand-800: 15 79% 32%;
+    --brand-900: 15 75% 28%;
+
+    /* Dark Mode Neutral Colors */
+    --neutral-50: 221 39% 11%;
+    --neutral-100: 215 28% 17%;
+    --neutral-200: 217 19% 27%;
+    --neutral-300: 215 14% 34%;
+    --neutral-400: 220 9% 46%;
+    --neutral-500: 218 11% 65%;
+    --neutral-600: 216 12% 84%;
+    --neutral-700: 220 13% 91%;
+    --neutral-800: 220 14% 96%;
+    --neutral-900: 210 20% 98%;
   }
 }
 
