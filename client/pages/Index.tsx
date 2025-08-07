@@ -339,6 +339,32 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Trust Indicators Section */}
+      <section className="py-16 bg-white border-y border-neutral-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl font-bold text-neutral-900 mb-4">
+              Trusted & Authorized Business Setup Partner
+            </h2>
+            <p className="text-neutral-600">
+              Licensed and approved by UAE government authorities
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-8">
+            {trustIndicators.map((indicator, index) => (
+              <div key={index} className="text-center">
+                <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4 text-brand-600">
+                  {indicator.icon}
+                </div>
+                <h3 className="font-semibold text-neutral-900 mb-2">{indicator.title}</h3>
+                <p className="text-sm text-neutral-600">{indicator.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Partners Section */}
       <section className="py-16 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
