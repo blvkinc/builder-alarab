@@ -172,19 +172,19 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              <Badge className="mb-6 bg-brand-600/20 text-brand-400 hover:bg-brand-600/30">
+              <Badge className="mb-8 bg-brand-50 text-brand-700 border-brand-200 px-4 py-2">
                 ✨ Trusted by 10,000+ Businesses
               </Badge>
-              
-              <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+
+              <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
                 Start Your Business<br />
-                in the <span className="text-brand-500">UAE</span> with<br />
-                Confidence
+                in the <span className="text-brand-600">UAE</span><br />
+                <span className="text-neutral-500 font-normal">with Confidence</span>
               </h1>
-              
-              <p className="text-xl text-neutral-300 mb-8 leading-relaxed max-w-lg">
-                Complete business setup solutions with expert guidance. 
-                From licensing to bank accounts, we handle everything 
+
+              <p className="text-xl text-neutral-600 mb-10 leading-relaxed max-w-lg">
+                Complete business setup solutions with expert guidance.
+                From licensing to bank accounts, we handle everything
                 so you can focus on growing your business.
               </p>
               
