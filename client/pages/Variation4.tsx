@@ -90,27 +90,28 @@ export default function Variation4() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-2xl font-bold text-white">
-                UAE<span className="text-brand-500">Business</span>
+              <div className="text-xl font-bold text-white">
+                <span className="text-white">🏢</span> UAE Business
               </div>
             </div>
-            
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#" className="text-neutral-300 hover:text-white transition-colors">Services</a>
-              <a href="#industries" className="text-neutral-300 hover:text-white transition-colors">Industries</a>
-              <a href="#testimonials" className="text-neutral-300 hover:text-white transition-colors">Testimonials</a>
-              <a href="#contact" className="text-neutral-300 hover:text-white transition-colors">Contact</a>
-              <Button className="bg-brand-600 hover:bg-brand-700 text-white border-0">
-                Schedule Consultation
+
+            <div className="hidden md:flex items-center space-x-6">
+              <a href="#" className="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Home</a>
+              <a href="#" className="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Pricing</a>
+              <a href="#" className="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Services</a>
+              <a href="#" className="text-sm font-medium text-neutral-300 hover:text-white transition-colors">Jurisdictions</a>
+              <a href="#" className="text-sm font-medium text-neutral-300 hover:text-white transition-colors">FAQ</a>
+              <Button className="bg-brand-600 hover:bg-brand-700 text-white border-0 px-6 py-2 text-sm font-medium rounded-full">
+                Get Started
               </Button>
             </div>
 
             <div className="md:hidden">
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-neutral-300 hover:text-white"
+                className="text-neutral-300 hover:text-white p-2"
               >
-                {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                {isMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
             </div>
           </div>
@@ -120,13 +121,14 @@ export default function Variation4() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-neutral-800 bg-neutral-900/95 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              <a href="#" className="block px-3 py-2 text-neutral-300">Services</a>
-              <a href="#industries" className="block px-3 py-2 text-neutral-300">Industries</a>
-              <a href="#testimonials" className="block px-3 py-2 text-neutral-300">Testimonials</a>
-              <a href="#contact" className="block px-3 py-2 text-neutral-300">Contact</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-300">Home</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-300">Pricing</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-300">Services</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-300">Jurisdictions</a>
+              <a href="#" className="block px-3 py-2 text-sm font-medium text-neutral-300">FAQ</a>
               <div className="px-3 py-2">
-                <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white border-0">
-                  Schedule Consultation
+                <Button className="w-full bg-brand-600 hover:bg-brand-700 text-white border-0 rounded-full">
+                  Get Started
                 </Button>
               </div>
             </div>
