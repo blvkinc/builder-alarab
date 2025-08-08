@@ -1,5 +1,6 @@
-import * as React from "react";
+import React, { useEffect, useRef } from "react";
 import { cva, type VariantProps } from "class-variance-authority";
+import { gsap } from "gsap";
 
 import { cn } from "@/lib/utils";
 
@@ -19,17 +20,36 @@ const alertVariants = cva(
   },
 );
 
-const Alert = React.forwardRef<
-  HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>
->(({ className, variant, ...props }, ref) => (
-  <div
-    ref={ref}
-    role="alert"
-    className={cn(alertVariants({ variant }), className)}
-    {...props}
-  />
-));
+// Add AlertProps type
+type AlertProps = React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>;
+
+const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
+  ({ className, variant, children, ...props }, ref) => {
+    const innerRef = useRef<HTMLDivElement>(null);
+    useEffect(() => {
+      if (innerRef.current) {
+        gsap.fromTo(
+          innerRef.current,
+          { opacity: 0, y: 20 },
+          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
+        );
+      }
+    }, []);
+    return (
+      <div
+        ref={node => {
+          innerRef.current = node;
+          if (typeof ref === "function") ref(node);
+          else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
+        }}
+        className={cn(alertVariants({ variant, className }))}
+        {...props}
+      >
+        {children}
+      </div>
+    );
+  }
+);
 Alert.displayName = "Alert";
 
 const AlertTitle = React.forwardRef<
