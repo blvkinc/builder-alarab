@@ -228,7 +228,7 @@ export default function Index() {
 
             <div className="hidden md:flex items-center space-x-6">
               <a
-                href="#"
+                href="#hero"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Home
@@ -240,19 +240,19 @@ export default function Index() {
                 Pricing
               </a>
               <a
-                href="#"
+                href="#services"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Services
               </a>
               <a
-                href="#"
+                href="#jurisdictions"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Jurisdictions
               </a>
               <a
-                href="#"
+                href="#faq"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 FAQ
