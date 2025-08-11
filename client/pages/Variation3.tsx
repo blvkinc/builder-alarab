@@ -274,9 +274,11 @@ export default function Variation3() {
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
+        {/* Dubai Skyline Background */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)'}}></div>
         {/* Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-50 via-orange-50 to-yellow-50"></div>
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-50/70 via-orange-50/60 to-yellow-50/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent"></div>
 
         {/* Decorative Elements */}
         <div className="absolute top-20 left-10 w-20 h-20 bg-brand-200/30 rounded-full blur-xl"></div>

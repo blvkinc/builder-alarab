@@ -330,6 +330,9 @@ export default function Variation4() {
 
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
+        {/* Dubai Skyline Background */}
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)'}}></div>
+        <div className="absolute inset-0 bg-neutral-900/60"></div>
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div
