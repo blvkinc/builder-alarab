@@ -269,7 +269,7 @@ export default function Variation2() {
       </div>
 
       {/* Hero Section - Split Screen */}
-      <section className="min-h-screen flex">
+      <section id="hero" className="min-h-screen flex">
         {/* Left Side - Content */}
         <div className="flex-1 bg-white flex items-center justify-center px-8 lg:px-16">
           <div className="max-w-xl">
