@@ -228,7 +228,7 @@ export default function Index() {
 
             <div className="hidden md:flex items-center space-x-6">
               <a
-                href="#"
+                href="#hero"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Home
@@ -240,22 +240,22 @@ export default function Index() {
                 Pricing
               </a>
               <a
-                href="#"
+                href="#services"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Services
               </a>
               <a
-                href="#"
+                href="#jurisdictions"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Jurisdictions
               </a>
               <a
-                href="#"
+                href="#benefits"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
-                FAQ
+                Benefits
               </a>
               <Button className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 text-sm font-medium rounded-full">
                 Get Started
