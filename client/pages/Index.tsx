@@ -282,32 +282,37 @@ export default function Index() {
           <div className="md:hidden border-t border-neutral-100 bg-white/95 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <a
-                href="#"
+                href="#hero"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="#pricing"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
               </a>
               <a
-                href="#"
+                href="#services"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </a>
               <a
-                href="#"
+                href="#jurisdictions"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
+                onClick={() => setIsMenuOpen(false)}
               >
                 Jurisdictions
               </a>
               <a
-                href="#"
+                href="#faq"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
+                onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
               </a>
