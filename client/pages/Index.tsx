@@ -663,11 +663,11 @@ export default function Index() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-neutral-900 mb-4">
-              A perfect plan for your business
+              Find the Perfect Plan for Your Business
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
-              Choose the package that best fits your business needs. All plans
-              include expert guidance and government-approved processes.
+              Affordable UAE business setup packages with transparent pricing.
+              Choose the right jurisdiction and license type for your business goals.
             </p>
           </div>
 
