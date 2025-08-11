@@ -343,19 +343,18 @@ export default function Index() {
               </Badge>
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
-                Start Your Business
+                The Road to
                 <br />
-                in the <span className="text-brand-600">UAE</span>
+                <span className="text-brand-600">Scalability</span>
                 <br />
                 <span className="text-neutral-500 font-normal">
-                  with Confidence
+                  Starts Today
                 </span>
               </h1>
 
               <p className="text-xl text-neutral-600 mb-10 leading-relaxed max-w-lg">
-                Complete business setup solutions with expert guidance. From
-                licensing to bank accounts, we handle everything so you can
-                focus on growing your business.
+                Affordable UAE business setup packages tailored for freelancers, startups, and growing enterprises.
+                Start your business in the UAE with the confidence to succeed.
               </p>
 
               <div className="space-y-3 mb-10">
