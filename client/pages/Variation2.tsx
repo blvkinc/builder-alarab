@@ -555,47 +555,6 @@ export default function Variation2() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-neutral-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
-              What Our Clients Say
-            </h2>
-            <p className="text-xl text-neutral-600">
-              Join thousands of successful entrepreneurs who trusted us with
-              their business setup
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card key={index} className="p-8 bg-white">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-5 h-5 text-brand-500 fill-current"
-                    />
-                  ))}
-                </div>
-                <p className="text-neutral-700 mb-6 leading-relaxed">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <div className="font-semibold text-neutral-900">
-                    {testimonial.name}
-                  </div>
-                  <div className="text-sm text-neutral-600">
-                    {testimonial.company}
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-20 bg-neutral-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
