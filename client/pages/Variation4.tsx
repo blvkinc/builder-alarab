@@ -289,19 +289,18 @@ export default function Variation4() {
               </Badge>
 
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                Establish Your
+                The Road to
                 <br />
                 <span className="bg-gradient-to-r from-brand-400 to-brand-600 bg-clip-text text-transparent">
-                  Enterprise
+                  Scalability
                 </span>
                 <br />
-                in the UAE
+                Starts Today
               </h1>
 
               <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                Partner with the UAE's leading business setup consultancy. We
-                provide comprehensive corporate services backed by decades of
-                expertise and an unwavering commitment to excellence.
+                Affordable UAE business setup packages tailored for freelancers, startups, and growing enterprises.
+                Start your business in the UAE with the confidence to succeed.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
