@@ -151,13 +151,13 @@ export default function Variation2() {
 
             <div className="hidden md:flex items-center space-x-6">
               <a
-                href="#"
+                href="#hero"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Home
               </a>
               <a
-                href="#"
+                href="#pricing"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Pricing
