@@ -228,7 +228,7 @@ export default function Index() {
 
             <div className="hidden md:flex items-center space-x-6">
               <a
-                href="#hero"
+                href="#"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Home
@@ -240,19 +240,19 @@ export default function Index() {
                 Pricing
               </a>
               <a
-                href="#services"
+                href="#"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Services
               </a>
               <a
-                href="#jurisdictions"
+                href="#"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Jurisdictions
               </a>
               <a
-                href="#faq"
+                href="#"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 FAQ
@@ -282,37 +282,32 @@ export default function Index() {
           <div className="md:hidden border-t border-neutral-100 bg-white/95 backdrop-blur-md">
             <div className="px-2 pt-2 pb-3 space-y-1">
               <a
-                href="#hero"
+                href="#"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Home
               </a>
               <a
                 href="#pricing"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Pricing
               </a>
               <a
-                href="#services"
+                href="#"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Services
               </a>
               <a
-                href="#jurisdictions"
+                href="#"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
-                onClick={() => setIsMenuOpen(false)}
               >
                 Jurisdictions
               </a>
               <a
-                href="#faq"
+                href="#"
                 className="block px-3 py-2 text-sm font-medium text-neutral-600"
-                onClick={() => setIsMenuOpen(false)}
               >
                 FAQ
               </a>
@@ -351,7 +346,7 @@ export default function Index() {
       </div>
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-white text-neutral-900 overflow-hidden">
+      <section className="relative bg-white text-neutral-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-brand-50/20"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -486,7 +481,7 @@ export default function Index() {
       </section>
 
       {/* Trust Indicators Section */}
-      <section id="services" className="py-16 bg-white border-y border-neutral-100">
+      <section className="py-16 bg-white border-y border-neutral-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-neutral-900 mb-4">
@@ -535,7 +530,7 @@ export default function Index() {
       </section>
 
       {/* UAE Jurisdictions Section */}
-      <section id="jurisdictions" className="py-20 bg-white">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-neutral-900 mb-4">
@@ -748,58 +743,6 @@ export default function Index() {
                 </p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section id="faq" className="py-20 bg-neutral-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
-              Frequently Asked Questions
-            </h2>
-            <p className="text-xl text-neutral-600">
-              Get answers to the most common questions about UAE business setup
-            </p>
-          </div>
-
-          <div className="space-y-6">
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                How long does it take to set up a business in UAE?
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
-                Typically 7-14 working days depending on the business type, jurisdiction, and completeness of documentation. Our streamlined process ensures the fastest possible setup time.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                Do I need a local partner to start a business in UAE?
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
-                No, in designated free zones you can have 100% foreign ownership. For mainland companies, you may need a local service agent, which we can arrange for you.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                What are the costs involved in setting up a business?
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
-                Costs vary based on business type, location, and services required. Our packages start from AED 5,760 with transparent pricing and no hidden fees.
-              </p>
-            </div>
-
-            <div className="bg-white p-6 rounded-2xl shadow-sm">
-              <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                Can I get a UAE residency visa with my business?
-              </h3>
-              <p className="text-neutral-600 leading-relaxed">
-                Yes, most business setups qualify for UAE residency visas. The number of visas depends on your business type and jurisdiction. We handle all visa processing as part of our service.
-              </p>
-            </div>
           </div>
         </div>
       </section>

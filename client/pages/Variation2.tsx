@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -152,13 +151,13 @@ export default function Variation2() {
 
             <div className="hidden md:flex items-center space-x-6">
               <a
-                href="#hero"
+                href="#"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Home
               </a>
               <a
-                href="#pricing"
+                href="#"
                 className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
               >
                 Pricing
@@ -270,7 +269,7 @@ export default function Variation2() {
       </div>
 
       {/* Hero Section - Split Screen */}
-      <section id="hero" className="min-h-screen flex">
+      <section className="min-h-screen flex">
         {/* Left Side - Content */}
         <div className="flex-1 bg-white flex items-center justify-center px-8 lg:px-16">
           <div className="max-w-xl">
