@@ -707,7 +707,7 @@ export default function Index() {
                 <Button
                   className={`w-full rounded-xl py-3 font-medium ${plan.isPopular ? "bg-brand-600 hover:bg-brand-700 text-white" : "bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50"}`}
                 >
-                  Get Started
+                  Enquire Now
                 </Button>
               </Card>
             ))}
