@@ -716,7 +716,7 @@ export default function Index() {
       </section>
 
       {/* Benefits Section */}
-      <section className="py-20 bg-neutral-900 text-white">
+      <section id="benefits" className="py-20 bg-neutral-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <Badge className="mb-4 bg-brand-600/20 text-brand-400">
