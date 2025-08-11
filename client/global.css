@@ -55,17 +55,17 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Modern Brand Colors - Orange/Amber theme */
-    --brand-50: 33 100% 96%;
-    --brand-100: 34 100% 92%;
-    --brand-200: 32 98% 83%;
-    --brand-300: 31 97% 72%;
-    --brand-400: 27 96% 61%;
-    --brand-500: 25 95% 53%;
-    --brand-600: 21 90% 48%;
-    --brand-700: 17 88% 40%;
-    --brand-800: 15 79% 32%;
-    --brand-900: 15 75% 28%;
+    /* Modern Brand Colors - Custom Orange theme */
+    --brand-50: 20 77% 95%;
+    --brand-100: 20 77% 88%;
+    --brand-200: 20 77% 78%;
+    --brand-300: 20 77% 68%;
+    --brand-400: 20 77% 62%;
+    --brand-500: 20 77% 56%;
+    --brand-600: 20 77% 50%;
+    --brand-700: 20 77% 44%;
+    --brand-800: 20 77% 38%;
+    --brand-900: 20 77% 32%;
 
     /* Modern Neutral Colors */
     --neutral-50: 210 20% 98%;
