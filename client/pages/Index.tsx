@@ -346,8 +346,17 @@ export default function Index() {
       </div>
 
       {/* Hero Section */}
-      <section id="hero" className="relative bg-white text-neutral-900 overflow-hidden">
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)'}}></div>
+      <section
+        id="hero"
+        className="relative bg-white text-neutral-900 overflow-hidden"
+      >
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)",
+          }}
+        ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/90 via-white/85 to-brand-50/40"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -369,8 +378,9 @@ export default function Index() {
               </h1>
 
               <p className="text-xl text-neutral-600 mb-10 leading-relaxed max-w-lg">
-                Affordable UAE business setup packages tailored for freelancers, startups, and growing enterprises.
-                Start your business in the UAE with the confidence to succeed.
+                Affordable UAE business setup packages tailored for freelancers,
+                startups, and growing enterprises. Start your business in the
+                UAE with the confidence to succeed.
               </p>
 
               <div className="space-y-3 mb-10">
@@ -482,7 +492,10 @@ export default function Index() {
       </section>
 
       {/* Trust Indicators Section */}
-      <section id="services" className="py-16 bg-white border-y border-neutral-100">
+      <section
+        id="services"
+        className="py-16 bg-white border-y border-neutral-100"
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-neutral-900 mb-4">
@@ -668,7 +681,8 @@ export default function Index() {
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Affordable UAE business setup packages with transparent pricing.
-              Choose the right jurisdiction and license type for your business goals.
+              Choose the right jurisdiction and license type for your business
+              goals.
             </p>
           </div>
 
@@ -727,7 +741,8 @@ export default function Index() {
               Benefits of setting up a company in UAE
             </h2>
             <p className="text-xl text-neutral-300 max-w-2xl mx-auto">
-              Discover the advantages that make UAE the preferred destination for international businesses
+              Discover the advantages that make UAE the preferred destination
+              for international businesses
             </p>
           </div>
 

@@ -272,7 +272,13 @@ export default function Variation2() {
       <section className="min-h-screen flex">
         {/* Left Side - Content */}
         <div className="flex-1 relative bg-white flex items-center justify-center px-8 lg:px-16">
-          <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{backgroundImage: 'url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)'}}></div>
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+            style={{
+              backgroundImage:
+                "url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)",
+            }}
+          ></div>
           <div className="absolute inset-0 bg-white/85"></div>
           <div className="relative z-10 max-w-xl">
             <Badge className="mb-6 bg-brand-100 text-brand-700 border-brand-200">
@@ -288,8 +294,9 @@ export default function Variation2() {
             </h1>
 
             <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-              Affordable UAE business setup packages tailored for freelancers, startups, and growing enterprises.
-              Start your business in the UAE with the confidence to succeed.
+              Affordable UAE business setup packages tailored for freelancers,
+              startups, and growing enterprises. Start your business in the UAE
+              with the confidence to succeed.
             </p>
 
             <div className="grid grid-cols-2 gap-6 mb-8">
@@ -512,13 +519,17 @@ export default function Variation2() {
             </h2>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Affordable UAE business setup packages with transparent pricing.
-              Choose the right jurisdiction and license type for your business goals.
+              Choose the right jurisdiction and license type for your business
+              goals.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {pricingPlans.map((plan, index) => (
-              <Card key={index} className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${plan.isPopular ? 'ring-2 ring-brand-500 bg-brand-50/30' : 'bg-white'}`}>
+              <Card
+                key={index}
+                className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${plan.isPopular ? "ring-2 ring-brand-500 bg-brand-50/30" : "bg-white"}`}
+              >
                 {plan.isPopular && (
                   <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white rounded-full px-4 py-1">
                     Most Popular

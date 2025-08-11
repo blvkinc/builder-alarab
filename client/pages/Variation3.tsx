@@ -275,7 +275,13 @@ export default function Variation3() {
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
         {/* Dubai Skyline Background */}
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{backgroundImage: 'url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)'}}></div>
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage:
+              "url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)",
+          }}
+        ></div>
         {/* Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-brand-50/70 via-orange-50/60 to-yellow-50/70"></div>
         <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/40 to-transparent"></div>
@@ -302,8 +308,9 @@ export default function Variation3() {
             </h1>
 
             <p className="text-xl lg:text-2xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Affordable UAE business setup packages tailored for freelancers, startups, and growing enterprises.
-              Start your business in the UAE with the confidence to succeed.
+              Affordable UAE business setup packages tailored for freelancers,
+              startups, and growing enterprises. Start your business in the UAE
+              with the confidence to succeed.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
