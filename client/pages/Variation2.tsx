@@ -274,7 +274,7 @@ export default function Variation2() {
         <div className="flex-1 relative bg-white flex items-center justify-center px-8 lg:px-16">
           <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10" style={{backgroundImage: 'url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)'}}></div>
           <div className="absolute inset-0 bg-white/85"></div>
-          <div className="max-w-xl">
+          <div className="relative z-10 max-w-xl">
             <Badge className="mb-6 bg-brand-100 text-brand-700 border-brand-200">
               🚀 Launch Your Business Fast
             </Badge>
