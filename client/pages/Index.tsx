@@ -19,12 +19,14 @@ import {
   Award,
   Building2,
   Phone,
+  ArrowUp,
 } from "lucide-react";
 import gsap from "gsap";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentVariation, setCurrentVariation] = useState(1);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const variations = [
     { id: 1, name: "Modern Hero", path: "/" },
@@ -96,31 +98,31 @@ export default function Index() {
     {
       step: "1",
       title: "Free Consultation",
-      description: "Discuss your business goals and requirements",
+      description: "Discuss your business goals and requirements with our experts.",
       duration: "30 minutes",
     },
     {
       step: "2",
       title: "Document Preparation",
-      description: "Prepare and notarize all required documents",
+      description: "We prepare and notarize all required documents for you.",
       duration: "1-2 days",
     },
     {
       step: "3",
       title: "License Application",
-      description: "Submit application to relevant authorities",
+      description: "Submit application to relevant authorities and track status.",
       duration: "3-5 days",
     },
     {
       step: "4",
       title: "Approvals & Setup",
-      description: "Receive approvals and complete registration",
+      description: "Receive approvals and complete registration, ready to operate.",
       duration: "2-3 days",
     },
     {
       step: "5",
       title: "Bank Account & Visa",
-      description: "Open bank account and process visas",
+      description: "Open bank account and process visas with our support.",
       duration: "5-7 days",
     },
   ];
@@ -198,20 +200,52 @@ export default function Index() {
   const benefits = [
     {
       icon: <Globe className="w-6 h-6" />,
-      title: "100% Foreign Ownership",
-      description:
-        "Own your business completely without local partnership requirements",
+      title: "100% Business Ownership",
+      description: "Enjoy full control of your company with 100% foreign ownership in the UAE.",
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Tax-Free Environment",
-      description:
-        "Zero corporate and personal income tax in designated free zones",
+      title: "No Physical Presence Required",
+      description: "Set up your company remotely — no need to be physically present in the UAE.",
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Strategic Location",
-      description: "Gateway to Middle East, Africa, and Asia markets",
+      title: "Low Corporate Tax",
+      description: "Corporate tax is capped at just 9% on profits above AED 375,000, with smaller enterprises benefiting from a 0% rate.",
+    },
+    {
+      icon: <Clock className="w-6 h-6" />,
+      title: "Launch in Just 3 Days",
+      description: "Get your business up and running in as little as 72 hours.",
+    },
+    {
+      icon: <Star className="w-6 h-6" />,
+      title: "Family Sponsorship",
+      description: "Secure residency for your loved ones and build your future together.",
+    },
+    {
+      icon: <Award className="w-6 h-6" />,
+      title: "Global Access",
+      description: "Position yourself in a global hub with direct reach to international markets.",
+    },
+  ];
+
+  const faqs = [
+    {
+      question: "How long does it take to register a company in Dubai?",
+      answer: "Most businesses can be registered within 1 to 3 weeks. Our process and understanding of the local regulations let us expedite the setup process; meaning your business can start operating as soon as possible.",
+    },
+    {
+      question: "How much does it cost to set up a business in Dubai?",
+      answer: "Generally costs can range from AED 15,000 to AED 50,000. We’ll give you tailored packages to your budget and business needs; all transparent to a tee.",
+    },
+    {
+      question: "Do I need a local sponsor to start a business in the UAE?",
+      answer: "Recent changes now allow 100% ownership of mainland businesses in many instances.",
+    },
+    {
+      question: "What are the benefits of setting up a business in a Free Zone?",
+      answer: "In addition to the ownership and tax perks, the UAE gives you specialized facilities and infrastructure tailored to your business activities. We help you identify exactly which Free Zone best aligns with your business vision.",
     },
   ];
 
@@ -226,6 +260,21 @@ export default function Index() {
       );
     }
   }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToHero = () => {
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -381,19 +430,11 @@ export default function Index() {
               </Badge>
 
               <h1 className="text-5xl lg:text-7xl font-bold mb-8 leading-tight tracking-tight">
-                The Road to
-                <br />
-                <span className="text-brand-600">Scalability</span>
-                <br />
-                <span className="text-neutral-500 font-normal">
-                  Starts Today
-                </span>
+                Start Your Business in the UAE with Confidence
               </h1>
 
               <p className="text-xl text-neutral-600 mb-10 leading-relaxed max-w-lg">
-                Affordable UAE business setup packages tailored for freelancers,
-                startups, and growing enterprises. Start your business in the
-                UAE with the confidence to succeed.
+                Trade License in UAE · Lease Agreement · Up to 5 Business Activities · Up to 5 Shareholders · LLC Structure with 100% Ownership
               </p>
 
               <div className="space-y-3 mb-10">
@@ -776,6 +817,33 @@ export default function Index() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              Answers to common questions about business setup in the UAE
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {faqs.map((faq, index) => (
+              <div key={index} className="bg-neutral-50 rounded-2xl p-6 shadow-lg">
+                <h3 className="text-2xl font-bold text-neutral-900 mb-4">
+                  {faq.question}
+                </h3>
+                <p className="text-neutral-600 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-brand-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -783,8 +851,7 @@ export default function Index() {
             Ready to Start Your Business in the Emirates?
           </h2>
           <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
-            Join thousands of successful entrepreneurs who chose UAE as their
-            business destination. Get expert guidance from start to finish.
+            At every step, we provide clear and expert guidance, making sure your path to success is as smooth as possible. No jargon, no confusion—just results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <Button
@@ -813,6 +880,17 @@ export default function Index() {
           <MessageCircle className="w-6 h-6" />
         </Button>
       </div>
+
+      {/* Floating Scroll-to-Hero Arrow Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToHero}
+          className="fixed bottom-6 right-6 z-50 bg-brand-600 hover:bg-brand-700 text-white w-14 h-14 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center"
+          aria-label="Scroll to Hero"
+        >
+          <ArrowUp className="w-7 h-7" />
+        </button>
+      )}
 
       {/* Footer */}
       <footer className="bg-neutral-900 text-white py-12">

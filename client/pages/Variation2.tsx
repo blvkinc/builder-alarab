@@ -15,12 +15,14 @@ import {
   Building2,
   Globe,
   Shield,
+  ArrowUp,
 } from "lucide-react";
 import gsap from "gsap";
 
 export default function Variation2() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentVariation, setCurrentVariation] = useState(2);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const variations = [
     { id: 1, name: "Modern Hero", path: "/" },
@@ -39,42 +41,44 @@ export default function Variation2() {
   const services = [
     {
       icon: <Building2 className="w-8 h-8" />,
-      title: "Business License",
-      description:
-        "Get your trade license approved through our streamlined process",
+      title: "100% Business Ownership",
+      description: "Enjoy full control of your company with 100% foreign ownership in the UAE.",
     },
     {
       icon: <Globe className="w-8 h-8" />,
-      title: "Free Zone Setup",
-      description: "Access 100% foreign ownership in UAE free zones",
+      title: "No Physical Presence Required",
+      description: "Set up your company remotely — no need to be physically present in the UAE.",
     },
     {
       icon: <Shield className="w-8 h-8" />,
-      title: "Bank Account",
-      description: "Open corporate bank accounts with major UAE banks",
+      title: "Low Corporate Tax",
+      description: "Corporate tax is capped at just 9% on profits above AED 375,000, with smaller enterprises benefiting from a 0% rate.",
     },
   ];
 
   const testimonials = [
     {
-      name: "Sarah Ahmed",
-      company: "Tech Solutions FZ",
-      content:
-        "The entire process was seamless. Our business was up and running in just 10 days!",
+      name: "How long does it take to register a company in Dubai?",
+      company: "",
+      content: "Most businesses can be registered within 1 to 3 weeks. Our process and understanding of the local regulations let us expedite the setup process; meaning your business can start operating as soon as possible.",
       rating: 5,
     },
     {
-      name: "Michael Chen",
-      company: "Global Trading LLC",
-      content:
-        "Exceptional service and support. Highly recommend for business setup in UAE.",
+      name: "How much does it cost to set up a business in Dubai?",
+      company: "",
+      content: "Generally costs can range from AED 15,000 to AED 50,000. We’ll give you tailored packages to your budget and business needs; all transparent to a tee.",
       rating: 5,
     },
     {
-      name: "Priya Sharma",
-      company: "Creative Agency",
-      content:
-        "Professional team that handled everything from A to Z. Very satisfied!",
+      name: "Do I need a local sponsor to start a business in the UAE?",
+      company: "",
+      content: "Recent changes now allow 100% ownership of mainland businesses in many instances.",
+      rating: 5,
+    },
+    {
+      name: "What are the benefits of setting up a business in a Free Zone?",
+      company: "",
+      content: "In addition to the ownership and tax perks, the UAE gives you specialized facilities and infrastructure tailored to your business activities. We help you identify exactly which Free Zone best aligns with your business vision.",
       rating: 5,
     },
   ];
@@ -149,6 +153,21 @@ export default function Variation2() {
       );
     }
   }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToHero = () => {
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -282,33 +301,27 @@ export default function Variation2() {
       </div>
 
       {/* Hero Section - Split Screen */}
-      <section className="min-h-screen flex" ref={heroRef}>
+      <section id="hero" className="min-h-screen flex" ref={heroRef}>
         {/* Left Side - Content */}
         <div className="flex-1 relative bg-white flex items-center justify-center px-8 lg:px-16">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
             style={{
               backgroundImage: "url(/dubai-skyline.jpg)",
             }}
           ></div>
-          <div className="absolute inset-0 bg-white/85"></div>
+          <div className="absolute inset-0 bg-white/60"></div>
           <div className="relative z-10 max-w-xl">
             <Badge className="mb-6 bg-brand-100 text-brand-700 border-brand-200">
               🚀 Launch Your Business Fast
             </Badge>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
-              The Road to
-              <br />
-              <span className="text-brand-600">Scalability</span>
-              <br />
-              Starts Today
+              Start Your Business in the UAE with Confidence
             </h1>
 
             <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-              Affordable UAE business setup packages tailored for freelancers,
-              startups, and growing enterprises. Start your business in the UAE
-              with the confidence to succeed.
+              Trade License in UAE · Lease Agreement · Up to 5 Business Activities · Up to 5 Shareholders · LLC Structure with 100% Ownership
             </p>
 
             <div className="grid grid-cols-2 gap-6 mb-8">
@@ -584,11 +597,10 @@ export default function Variation2() {
       <section className="py-20 bg-neutral-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Ready to Launch Your UAE Business?
+            Ready to Start Your Business in the Emirates?
           </h2>
-          <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-            Take the first step towards business success in the UAE. Our experts
-            are ready to guide you through every step of the process.
+          <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
+            At every step, we provide clear and expert guidance, making sure your path to success is as smooth as possible. No jargon, no confusion—just results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -632,6 +644,17 @@ export default function Variation2() {
           </div>
         </div>
       </footer>
+
+      {/* Floating Scroll-to-Hero Arrow Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToHero}
+          className="fixed bottom-6 right-6 z-50 bg-brand-600 hover:bg-brand-700 text-white w-14 h-14 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center"
+          aria-label="Scroll to Hero"
+        >
+          <ArrowUp className="w-7 h-7" />
+        </button>
+      )}
     </div>
   );
 }

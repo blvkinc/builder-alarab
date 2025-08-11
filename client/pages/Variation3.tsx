@@ -16,12 +16,14 @@ import {
   Zap,
   Trophy,
   Heart,
+  ArrowUp,
 } from "lucide-react";
 import gsap from "gsap";
 
 export default function Variation3() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentVariation, setCurrentVariation] = useState(3);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const variations = [
     { id: 1, name: "Modern Hero", path: "/" },
@@ -33,27 +35,23 @@ export default function Variation3() {
   const steps = [
     {
       step: "01",
-      title: "Consultation",
-      description:
-        "Free expert consultation to understand your business needs and requirements",
+      title: "100% Business Ownership",
+      description: "Enjoy full control of your company with 100% foreign ownership in the UAE.",
     },
     {
       step: "02",
-      title: "Documentation",
-      description:
-        "We prepare and submit all required documents to government authorities",
+      title: "No Physical Presence Required",
+      description: "Set up your company remotely — no need to be physically present in the UAE.",
     },
     {
       step: "03",
-      title: "Approval",
-      description:
-        "Track your application status and receive approvals from relevant departments",
+      title: "Low Corporate Tax",
+      description: "Corporate tax is capped at just 9% on profits above AED 375,000, with smaller enterprises benefiting from a 0% rate.",
     },
     {
       step: "04",
-      title: "Launch",
-      description:
-        "Your business is ready! Get your license, visa, and bank account",
+      title: "Launch in Just 3 Days",
+      description: "Get your business up and running in as little as 72 hours.",
     },
   ];
 
@@ -126,19 +124,20 @@ export default function Variation3() {
 
   const faqs = [
     {
-      question: "How long does it take to set up a business in UAE?",
-      answer:
-        "Typically 7-14 working days depending on the business type and documentation.",
+      question: "How long does it take to register a company in Dubai?",
+      answer: "Most businesses can be registered within 1 to 3 weeks. Our process and understanding of the local regulations let us expedite the setup process; meaning your business can start operating as soon as possible.",
     },
     {
-      question: "Do I need a local partner to start a business in UAE?",
-      answer:
-        "No, in designated free zones you can have 100% foreign ownership.",
+      question: "How much does it cost to set up a business in Dubai?",
+      answer: "Generally costs can range from AED 15,000 to AED 50,000. We’ll give you tailored packages to your budget and business needs; all transparent to a tee.",
     },
     {
-      question: "What are the costs involved in setting up a business?",
-      answer:
-        "Costs vary based on business type, location, and services required. Our packages start from AED 6,000.",
+      question: "Do I need a local sponsor to start a business in the UAE?",
+      answer: "Recent changes now allow 100% ownership of mainland businesses in many instances.",
+    },
+    {
+      question: "What are the benefits of setting up a business in a Free Zone?",
+      answer: "In addition to the ownership and tax perks, the UAE gives you specialized facilities and infrastructure tailored to your business activities. We help you identify exactly which Free Zone best aligns with your business vision.",
     },
   ];
 
@@ -153,6 +152,21 @@ export default function Variation3() {
       );
     }
   }, []);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToHero = () => {
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -286,7 +300,7 @@ export default function Variation3() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-32 overflow-hidden" ref={heroRef}>
+      <section id="hero" className="relative pt-20 pb-32 overflow-hidden" ref={heroRef}>
         {/* Dubai Skyline Background */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -310,19 +324,11 @@ export default function Variation3() {
             </Badge>
 
             <h1 className="text-5xl lg:text-7xl font-bold text-neutral-900 mb-6 leading-tight">
-              The Road to
-              <br />
-              <span className="bg-gradient-to-r from-brand-600 to-orange-500 bg-clip-text text-transparent">
-                Scalability
-              </span>
-              <br />
-              Starts Today
+              Start Your Business in the UAE with Confidence
             </h1>
 
             <p className="text-xl lg:text-2xl text-neutral-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Affordable UAE business setup packages tailored for freelancers,
-              startups, and growing enterprises. Start your business in the UAE
-              with the confidence to succeed.
+              Trade License in UAE · Lease Agreement · Up to 5 Business Activities · Up to 5 Shareholders · LLC Structure with 100% Ownership
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
@@ -555,11 +561,10 @@ export default function Variation3() {
       <section className="py-20 bg-neutral-900 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Your Gateway to UAE Business Setup
+            Ready to Start Your Business in the Emirates?
           </h2>
-          <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-            Join the thousands of entrepreneurs who have successfully launched
-            their businesses in the UAE with our expert guidance.
+          <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
+            At every step, we provide clear and expert guidance, making sure your path to success is as smooth as possible. No jargon, no confusion—just results.
           </p>
           <Button
             size="lg"
@@ -570,6 +575,17 @@ export default function Variation3() {
           </Button>
         </div>
       </section>
+
+      {/* Floating Scroll-to-Hero Arrow Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToHero}
+          className="fixed bottom-6 right-6 z-50 bg-brand-600 hover:bg-brand-700 text-white w-14 h-14 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center"
+          aria-label="Scroll to Hero"
+        >
+          <ArrowUp className="w-7 h-7" />
+        </button>
+      )}
 
       {/* Footer */}
       <footer className="bg-neutral-900 text-white py-12 border-t border-neutral-800">
@@ -595,6 +611,22 @@ export default function Variation3() {
           </div>
         </div>
       </footer>
+
+      {/* Partners Section */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-lg font-semibold text-neutral-600 mb-8">
+            Our Channel Partners
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+            <img src="/partners/Ajman-Free-Zone@4x.png" alt="Ajman Free Zone" className="h-16 object-contain" />
+            <img src="/partners/dubai-economy-new-seeklogo.png" alt="Dubai Economy" className="h-16 object-contain" />
+            <img src="/partners/IFZA-min-1024x250-1.webp" alt="IFZA" className="h-16 object-contain" />
+            <img src="/partners/Meydan_updated-min-1024x250-1.webp" alt="Meydan" className="h-16 object-contain" />
+            <img src="/partners/SPC_new-min-1024x250-1.webp" alt="SPC" className="h-16 object-contain" />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

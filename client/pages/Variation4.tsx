@@ -16,12 +16,14 @@ import {
   Briefcase,
   GraduationCap,
   Lightbulb,
+  ArrowUp,
 } from "lucide-react";
 import gsap from "gsap";
 
 export default function Variation4() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentVariation, setCurrentVariation] = useState(4);
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const variations = [
     { id: 1, name: "Modern Hero", path: "/" },
@@ -32,23 +34,23 @@ export default function Variation4() {
 
   const achievements = [
     {
-      number: "15,000+",
-      label: "Companies Established",
+      number: "100%",
+      label: "Business Ownership",
       icon: <Building className="w-6 h-6" />,
     },
     {
-      number: "99.2%",
-      label: "Success Rate",
+      number: "No Physical Presence",
+      label: "Required",
       icon: <Award className="w-6 h-6" />,
     },
     {
-      number: "50+",
-      label: "Expert Consultants",
+      number: "9%",
+      label: "Corporate Tax Cap",
       icon: <Users className="w-6 h-6" />,
     },
     {
-      number: "24/7",
-      label: "Premium Support",
+      number: "3 Days",
+      label: "To Launch",
       icon: <TrendingUp className="w-6 h-6" />,
     },
   ];
@@ -117,25 +119,28 @@ export default function Variation4() {
 
   const testimonials = [
     {
-      name: "Alexander Rodriguez",
-      title: "CEO, TechVentures DMCC",
-      content:
-        "The professionalism and expertise demonstrated throughout our company setup was exceptional. We were operational within 8 days.",
-      image: "👨‍💼",
+      name: "How long does it take to register a company in Dubai?",
+      title: "",
+      content: "Most businesses can be registered within 1 to 3 weeks. Our process and understanding of the local regulations let us expedite the setup process; meaning your business can start operating as soon as possible.",
+      image: "",
     },
     {
-      name: "Dr. Fatima Al-Zahra",
-      title: "Founder, MedConsult FZ",
-      content:
-        "Outstanding service quality and attention to detail. The team handled every aspect of our healthcare business licensing seamlessly.",
-      image: "👩‍⚕️",
+      name: "How much does it cost to set up a business in Dubai?",
+      title: "",
+      content: "Generally costs can range from AED 15,000 to AED 50,000. We’ll give you tailored packages to your budget and business needs; all transparent to a tee.",
+      image: "",
     },
     {
-      name: "James Chen",
-      title: "Director, Global Trade LLC",
-      content:
-        "Their deep understanding of UAE business regulations and proactive approach made our expansion into MENA markets effortless.",
-      image: "👨‍💻",
+      name: "Do I need a local sponsor to start a business in the UAE?",
+      title: "",
+      content: "Recent changes now allow 100% ownership of mainland businesses in many instances.",
+      image: "",
+    },
+    {
+      name: "What are the benefits of setting up a business in a Free Zone?",
+      title: "",
+      content: "In addition to the ownership and tax perks, the UAE gives you specialized facilities and infrastructure tailored to your business activities. We help you identify exactly which Free Zone best aligns with your business vision.",
+      image: "",
     },
   ];
 
@@ -210,64 +215,45 @@ export default function Variation4() {
     }
   }, []);
 
+  useEffect(() => {
+    const onScroll = () => {
+      setShowScrollTop(window.scrollY > 200);
+    };
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const scrollToHero = () => {
+    const hero = document.getElementById("hero");
+    if (hero) {
+      hero.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
       {/* Navigation */}
-      <nav className="bg-neutral-900/95 backdrop-blur-md border-b border-neutral-800 fixed w-full z-50">
+      <nav className="bg-white/95 backdrop-blur-md border-b border-neutral-100 fixed w-full z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
-              <div className="text-xl font-bold text-white">
-                <span className="text-white">🏢</span> UAE Business
+              <div className="text-xl font-bold text-neutral-900">
+                <span className="text-neutral-900">🏢</span> UAE Business
               </div>
             </div>
 
             <div className="hidden md:flex items-center space-x-6">
-              <a
-                href="#"
-                className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-              >
-                Home
-              </a>
-              <a
-                href="#"
-                className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-              >
-                Pricing
-              </a>
-              <a
-                href="#"
-                className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-              >
-                Services
-              </a>
-              <a
-                href="#"
-                className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-              >
-                Jurisdictions
-              </a>
-              <a
-                href="#"
-                className="text-sm font-medium text-neutral-300 hover:text-white transition-colors"
-              >
-                FAQ
-              </a>
-              <Button className="bg-brand-600 hover:bg-brand-700 text-white border-0 px-6 py-2 text-sm font-medium rounded-full">
-                Get Started
-              </Button>
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Home</a>
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Pricing</a>
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Services</a>
+              <a href="#" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">Jurisdictions</a>
+              <a href="#faq" className="text-sm font-medium text-neutral-600 hover:text-neutral-900 transition-colors">FAQ</a>
+              <Button className="bg-brand-600 hover:bg-brand-700 text-white px-6 py-2 text-sm font-medium rounded-full">Get Started</Button>
             </div>
 
             <div className="md:hidden">
-              <button
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                className="text-neutral-300 hover:text-white p-2"
-              >
-                {isMenuOpen ? (
-                  <X className="w-5 h-5" />
-                ) : (
-                  <Menu className="w-5 h-5" />
-                )}
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="text-neutral-600 hover:text-neutral-900 p-2">
+                {isMenuOpen ? (<X className="w-5 h-5" />) : (<Menu className="w-5 h-5" />)}
               </button>
             </div>
           </div>
@@ -342,7 +328,7 @@ export default function Variation4() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-32 overflow-hidden" ref={heroRef}>
+      <section id="hero" className="relative pt-20 pb-32 overflow-hidden" ref={heroRef}>
         {/* Dubai Skyline Background */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -367,19 +353,11 @@ export default function Variation4() {
               </Badge>
 
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                The Road to
-                <br />
-                <span className="bg-gradient-to-r from-brand-400 to-brand-600 bg-clip-text text-transparent">
-                  Scalability
-                </span>
-                <br />
-                Starts Today
+                Start Your Business in the UAE with Confidence
               </h1>
 
               <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                Affordable UAE business setup packages tailored for freelancers,
-                startups, and growing enterprises. Start your business in the
-                UAE with the confidence to succeed.
+                Trade License in UAE · Lease Agreement · Up to 5 Business Activities · Up to 5 Shareholders · LLC Structure with 100% Ownership
               </p>
 
               <div className="grid grid-cols-2 gap-6 mb-8">
@@ -652,12 +630,10 @@ export default function Variation4() {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
-            Ready to Establish Your UAE Presence?
+            Ready to Start Your Business in the Emirates?
           </h2>
           <p className="text-xl text-brand-100 mb-8 max-w-2xl mx-auto">
-            Connect with our senior consultants to discuss your business
-            objectives and explore the optimal setup strategy for your UAE
-            venture.
+            At every step, we provide clear and expert guidance, making sure your path to success is as smooth as possible. No jargon, no confusion—just results.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -676,6 +652,17 @@ export default function Variation4() {
           </div>
         </div>
       </section>
+
+      {/* Floating Scroll-to-Hero Arrow Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToHero}
+          className="fixed bottom-6 right-6 z-50 bg-brand-600 hover:bg-brand-700 text-white w-14 h-14 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 flex items-center justify-center"
+          aria-label="Scroll to Hero"
+        >
+          <ArrowUp className="w-7 h-7" />
+        </button>
+      )}
 
       {/* Footer */}
       <footer className="bg-neutral-900 border-t border-neutral-800 py-16">
@@ -758,6 +745,22 @@ export default function Variation4() {
           </div>
         </div>
       </footer>
+
+      {/* PARTNERS SECTION (if present) */}
+      <section className="py-16 bg-neutral-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-center text-lg font-semibold text-neutral-600 mb-8">
+            Our Channel Partners
+          </h2>
+          <div className="flex flex-wrap justify-center items-center gap-8 opacity-80">
+            <img src="/partners/Ajman-Free-Zone@4x.png" alt="Ajman Free Zone" className="h-16 object-contain" />
+            <img src="/partners/dubai-economy-new-seeklogo.png" alt="Dubai Economy" className="h-16 object-contain" />
+            <img src="/partners/IFZA-min-1024x250-1.webp" alt="IFZA" className="h-16 object-contain" />
+            <img src="/partners/Meydan_updated-min-1024x250-1.webp" alt="Meydan" className="h-16 object-contain" />
+            <img src="/partners/SPC_new-min-1024x250-1.webp" alt="SPC" className="h-16 object-contain" />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
