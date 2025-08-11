@@ -138,6 +138,65 @@ export default function Variation4() {
     },
   ];
 
+  const pricingPlans = [
+    {
+      name: "E-Commerce Freezone Starter",
+      price: "AED 5,760",
+      description: "Most Affordable Free Zone Company Setup",
+      features: [
+        "Freezone Business License",
+        "Incorporation Certificate & Company Stamp",
+        "Trade Name Reservation",
+        "Lease Agreement (Virtual/Shared Office)",
+        "Professional Business Consultancy",
+        "(Government fees may apply)",
+      ],
+      isPopular: false,
+    },
+    {
+      name: "Ajman Value License",
+      price: "AED 10,800",
+      description: "Best Value for Multiple UAE Residency Visas",
+      features: [
+        "Ajman Freezone License + 10 Activities",
+        "2 UAE Residency Visas Included",
+        "Establishment Cards x2 + Emirates ID/Medical x2",
+        "Unlimited Shareholders",
+        "Professional Business Consultancy",
+        "Free Virtual Office for 6 Months (Limited Offer)",
+      ],
+      isPopular: true,
+    },
+    {
+      name: "RAKEZ Growth License",
+      price: "AED 14,020",
+      description: "Maximum Flexibility for Partnerships in UAE Free Zones",
+      features: [
+        "RAKEZ Business License + 10 Activities",
+        "Accepts up to 50 Shareholders",
+        "100% Foreign Ownership",
+        "1 UAE Residency Visa + Medical/Emirates ID",
+        "Professional Business Consultancy",
+        "(All-inclusive pricing)",
+      ],
+      isPopular: false,
+    },
+    {
+      name: "Dubai Mainland Market Access",
+      price: "AED 23,000",
+      description: "Zero Market Restrictions + Corporate Tax Registration",
+      features: [
+        "Dubai Mainland License (Service/Professional)",
+        "1 Investor Visa + Local Service Agent",
+        "Corporate Tax Registration UAE",
+        "1-Year Virtual Office Ejari",
+        "Memorandum of Association + Company Stamp",
+        "Priority Government Liaison",
+      ],
+      isPopular: false,
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-neutral-900 text-white">
       {/* Navigation */}
