@@ -1,6 +1,5 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
-import { gsap } from "gsap";
 
 import { cn } from "@/lib/utils";
 
@@ -24,31 +23,13 @@ const alertVariants = cva(
 type AlertProps = React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof alertVariants>;
 
 const Alert = React.forwardRef<HTMLDivElement, AlertProps>(
-  ({ className, variant, children, ...props }, ref) => {
-    const innerRef = useRef<HTMLDivElement>(null);
-    useEffect(() => {
-      if (innerRef.current) {
-        gsap.fromTo(
-          innerRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
-        );
-      }
-    }, []);
-    return (
-      <div
-        ref={node => {
-          innerRef.current = node;
-          if (typeof ref === "function") ref(node);
-          else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
-        }}
-        className={cn(alertVariants({ variant, className }))}
-        {...props}
-      >
-        {children}
-      </div>
-    );
-  }
+  ({ className, variant, ...props }, ref) => (
+    <div
+      ref={ref}
+      className={cn(alertVariants({ variant, className }))}
+      {...props}
+    />
+  )
 );
 Alert.displayName = "Alert";
 
