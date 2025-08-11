@@ -5,31 +5,13 @@ import { cn } from "@/lib/utils";
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, children, ...props }, ref) => {
-  const innerRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
-    if (innerRef.current) {
-      gsap.fromTo(
-        innerRef.current,
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
-      );
-    }
-  }, []);
-  return (
-    <div
-      ref={node => {
-        innerRef.current = node;
-        if (typeof ref === "function") ref(node);
-        else if (ref) (ref as React.MutableRefObject<HTMLDivElement | null>).current = node;
-      }}
-      className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
-      {...props}
-    >
-      {children}
-    </div>
-  );
-});
+>(({ className, ...props }, ref) => (
+  <div
+    ref={ref}
+    className={cn("rounded-xl border bg-card text-card-foreground shadow", className)}
+    {...props}
+  />
+));
 Card.displayName = "Card";
 
 const CardHeader = React.forwardRef<
