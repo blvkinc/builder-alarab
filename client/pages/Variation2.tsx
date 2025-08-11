@@ -219,17 +219,16 @@ export default function Variation2() {
             </Badge>
 
             <h1 className="text-5xl lg:text-6xl font-bold text-neutral-900 mb-6 leading-tight">
-              Your UAE
+              The Road to
               <br />
-              Business
+              <span className="text-brand-600">Scalability</span>
               <br />
-              <span className="text-brand-600">Starts Here</span>
+              Starts Today
             </h1>
 
             <p className="text-xl text-neutral-600 mb-8 leading-relaxed">
-              From company formation to bank account opening, we provide
-              end-to-end business setup services with expert guidance every step
-              of the way.
+              Affordable UAE business setup packages tailored for freelancers, startups, and growing enterprises.
+              Start your business in the UAE with the confidence to succeed.
             </p>
 
             <div className="grid grid-cols-2 gap-6 mb-8">
