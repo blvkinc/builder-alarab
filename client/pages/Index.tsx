@@ -346,7 +346,7 @@ export default function Index() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative bg-white text-neutral-900 overflow-hidden">
+      <section id="hero" className="relative bg-white text-neutral-900 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50 via-white to-brand-50/20"></div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
