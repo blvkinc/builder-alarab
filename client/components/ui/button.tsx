@@ -40,31 +40,14 @@ export interface ButtonProps
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, children, ...props }, ref) => {
-    const innerRef = useRef<HTMLButtonElement>(null);
-    // Merge refs
-    useEffect(() => {
-      if (innerRef.current) {
-        gsap.fromTo(
-          innerRef.current,
-          { opacity: 0, y: 20 },
-          { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }
-        );
-      }
-    }, []);
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}
-        ref={(node: HTMLButtonElement) => {
-          innerRef.current = node;
-          if (typeof ref === "function") ref(node);
-          else if (ref) (ref as React.MutableRefObject<HTMLButtonElement | null>).current = node;
-        }}
+        ref={ref}
         {...props}
-      >
-        {children}
-      </Comp>
+      />
     );
   }
 );
