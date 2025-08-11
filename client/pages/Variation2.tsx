@@ -501,6 +501,60 @@ export default function Variation2() {
         </div>
       </section>
 
+      {/* Pricing Section */}
+      <section id="pricing" className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-neutral-900 mb-4">
+              Find the Perfect Plan for Your Business
+            </h2>
+            <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
+              Affordable UAE business setup packages with transparent pricing.
+              Choose the right jurisdiction and license type for your business goals.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {pricingPlans.map((plan, index) => (
+              <Card key={index} className={`relative p-8 rounded-2xl border-0 shadow-lg hover:shadow-xl transition-all ${plan.isPopular ? 'ring-2 ring-brand-500 bg-brand-50/30' : 'bg-white'}`}>
+                {plan.isPopular && (
+                  <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-brand-600 text-white rounded-full px-4 py-1">
+                    Most Popular
+                  </Badge>
+                )}
+
+                <div className="text-center mb-8">
+                  <h3 className="text-sm font-semibold text-neutral-600 uppercase tracking-wide mb-4">
+                    {plan.name}
+                  </h3>
+                  <div className="text-4xl font-bold text-neutral-900 mb-3">
+                    {plan.price}
+                  </div>
+                  <p className="text-neutral-600">{plan.description}</p>
+                </div>
+
+                <ul className="space-y-4 mb-8">
+                  {plan.features.map((feature, featureIndex) => (
+                    <li key={featureIndex} className="flex items-start">
+                      <CheckCircle className="w-4 h-4 text-brand-500 mr-3 flex-shrink-0 mt-1" />
+                      <span className="text-neutral-700 text-sm">
+                        {feature}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Button
+                  className={`w-full rounded-xl py-3 font-medium ${plan.isPopular ? "bg-brand-600 hover:bg-brand-700 text-white" : "bg-white border-2 border-neutral-200 text-neutral-700 hover:bg-neutral-50"}`}
+                >
+                  Enquire Now
+                </Button>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials Section */}
       <section id="testimonials" className="py-20 bg-neutral-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
