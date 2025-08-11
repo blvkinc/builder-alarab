@@ -621,46 +621,6 @@ export default function Variation4() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20 bg-neutral-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              Client Success Stories
-            </h2>
-            <p className="text-xl text-neutral-300">
-              Trusted by industry leaders and innovative entrepreneurs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Card
-                key={index}
-                className="p-8 bg-neutral-900/50 border-neutral-700"
-              >
-                <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-neutral-700 rounded-full flex items-center justify-center text-2xl mr-4">
-                    {testimonial.image}
-                  </div>
-                  <div>
-                    <div className="font-semibold text-white">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-neutral-400">
-                      {testimonial.title}
-                    </div>
-                  </div>
-                </div>
-                <p className="text-neutral-300 leading-relaxed italic">
-                  "{testimonial.content}"
-                </p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Contact Section */}
       <section
         id="contact"
