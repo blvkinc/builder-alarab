@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -20,6 +20,7 @@ import {
   Building2,
   Phone,
 } from "lucide-react";
+import gsap from "gsap";
 
 export default function Index() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -214,6 +215,18 @@ export default function Index() {
     },
   ];
 
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (heroRef.current) {
+      gsap.fromTo(
+        heroRef.current.children,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, stagger: 0.2, duration: 1, ease: "power3.out" }
+      );
+    }
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
@@ -349,12 +362,12 @@ export default function Index() {
       <section
         id="hero"
         className="relative bg-white text-neutral-900 overflow-hidden"
+        ref={heroRef}
       >
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)",
+            backgroundImage: "url(/dubai-skyline.jpg)",
           }}
         ></div>
         <div className="absolute inset-0 bg-gradient-to-br from-neutral-50/90 via-white/85 to-brand-50/40"></div>

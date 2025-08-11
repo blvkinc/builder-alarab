@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -17,6 +17,7 @@ import {
   Trophy,
   Heart,
 } from "lucide-react";
+import gsap from "gsap";
 
 export default function Variation3() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -140,6 +141,18 @@ export default function Variation3() {
         "Costs vary based on business type, location, and services required. Our packages start from AED 6,000.",
     },
   ];
+
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (heroRef.current) {
+      gsap.fromTo(
+        heroRef.current.children,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, stagger: 0.2, duration: 1, ease: "power3.out" }
+      );
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -273,13 +286,12 @@ export default function Variation3() {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-20 pb-32 overflow-hidden">
+      <section className="relative pt-20 pb-32 overflow-hidden" ref={heroRef}>
         {/* Dubai Skyline Background */}
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage:
-              "url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)",
+            backgroundImage: "url(/dubai-skyline.jpg)",
           }}
         ></div>
         {/* Gradient Background */}

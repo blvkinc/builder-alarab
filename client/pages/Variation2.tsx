@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,6 +16,7 @@ import {
   Globe,
   Shield,
 } from "lucide-react";
+import gsap from "gsap";
 
 export default function Variation2() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -136,6 +137,18 @@ export default function Variation2() {
       isPopular: false,
     },
   ];
+
+  const heroRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (heroRef.current) {
+      gsap.fromTo(
+        heroRef.current.children,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, stagger: 0.2, duration: 1, ease: "power3.out" }
+      );
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -269,14 +282,13 @@ export default function Variation2() {
       </div>
 
       {/* Hero Section - Split Screen */}
-      <section className="min-h-screen flex">
+      <section className="min-h-screen flex" ref={heroRef}>
         {/* Left Side - Content */}
         <div className="flex-1 relative bg-white flex items-center justify-center px-8 lg:px-16">
           <div
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
             style={{
-              backgroundImage:
-                "url(https://alarabiyagroup.ae/wp-content/uploads/2025/06/CoverSlide4Dubai.png)",
+              backgroundImage: "url(/dubai-skyline.jpg)",
             }}
           ></div>
           <div className="absolute inset-0 bg-white/85"></div>
